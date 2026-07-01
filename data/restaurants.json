@@ -1,0 +1,154 @@
+[
+  {
+    "id": "1",
+    "name": "Pizzaria Bella Vista",
+    "image": "/placeholder.svg?height=200&width=300",
+    "cuisine": "Italiana",
+    "neighborhood": "Centro",
+    "averagePrice": 35,
+    "rating": 4.5,
+    "reviewCount": 127,
+    "deliveryTime": "30-45 min",
+    "deliveryFee": 5.99,
+    "menu": [
+      {
+        "id": "1-1",
+        "name": "Pizza Margherita",
+        "description": "Molho de tomate, mussarela, manjericão fresco",
+        "price": 32.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Pizzas"
+      },
+      {
+        "id": "1-2",
+        "name": "Pizza Pepperoni",
+        "description": "Molho de tomate, mussarela, pepperoni",
+        "price": 38.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Pizzas"
+      },
+      {
+        "id": "1-3",
+        "name": "Lasanha Bolonhesa",
+        "description": "Massa fresca, molho bolonhesa, queijos",
+        "price": 28.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Massas"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Burger House",
+    "image": "/placeholder.svg?height=200&width=300",
+    "cuisine": "Hambúrgueres",
+    "neighborhood": "Jardins",
+    "averagePrice": 28,
+    "rating": 4.2,
+    "reviewCount": 89,
+    "deliveryTime": "25-35 min",
+    "deliveryFee": 4.99,
+    "menu": [
+      {
+        "id": "2-1",
+        "name": "Classic Burger",
+        "description": "Pão brioche, hambúrguer 180g, queijo, alface, tomate",
+        "price": 24.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Hambúrgueres"
+      },
+      {
+        "id": "2-2",
+        "name": "Bacon Burger",
+        "description": "Pão brioche, hambúrguer 180g, bacon, queijo cheddar",
+        "price": 29.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Hambúrgueres"
+      },
+      {
+        "id": "2-3",
+        "name": "Batata Frita",
+        "description": "Porção de batatas fritas crocantes",
+        "price": 12.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Acompanhamentos"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Sushi Zen",
+    "image": "/placeholder.svg?height=200&width=300",
+    "cuisine": "Japonesa",
+    "neighborhood": "Vila Madalena",
+    "averagePrice": 45,
+    "rating": 4.7,
+    "reviewCount": 203,
+    "deliveryTime": "40-55 min",
+    "deliveryFee": 7.99,
+    "menu": [
+      {
+        "id": "3-1",
+        "name": "Combo Sashimi",
+        "description": "15 peças variadas de sashimi fresco",
+        "price": 52.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Sashimi"
+      },
+      {
+        "id": "3-2",
+        "name": "Temaki Salmão",
+        "description": "Temaki de salmão com cream cheese",
+        "price": 18.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Temaki"
+      },
+      {
+        "id": "3-3",
+        "name": "Hot Roll Filadélfia",
+        "description": "8 peças empanadas com salmão e cream cheese",
+        "price": 34.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Hot Rolls"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Taco Loco",
+    "image": "/placeholder.svg?height=200&width=300",
+    "cuisine": "Mexicana",
+    "neighborhood": "Pinheiros",
+    "averagePrice": 22,
+    "rating": 4.3,
+    "reviewCount": 156,
+    "deliveryTime": "20-30 min",
+    "deliveryFee": 3.99,
+    "menu": [
+      {
+        "id": "4-1",
+        "name": "Taco de Carne",
+        "description": "Tortilla com carne temperada, cebola, coentro",
+        "price": 8.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Tacos"
+      },
+      {
+        "id": "4-2",
+        "name": "Burrito Completo",
+        "description": "Tortilla grande com carne, feijão, arroz, queijo",
+        "price": 19.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Burritos"
+      },
+      {
+        "id": "4-3",
+        "name": "Nachos Supreme",
+        "description": "Nachos com queijo derretido, guacamole, jalapeños",
+        "price": 16.9,
+        "image": "/placeholder.svg?height=150&width=200",
+        "category": "Aperitivos"
+      }
+    ]
+  }
+]
