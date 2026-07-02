@@ -17,9 +17,11 @@ import {
   RESTAURANT_CATEGORIES,
   CATEGORY_LABELS,
   type SearchFilters,
+  type RestaurantCategory,
+  type PriceRange,
 } from "@/lib/types";
 
-const PRICE_RANGES = ["$", "$$", "$$$"];
+const PRICE_RANGES: PriceRange[] = ["$", "$$", "$$$"];
 const CITIES = ["Governador Valadares", "Belo Horizonte", "São Paulo", "Rio de Janeiro"];
 
 interface SearchFiltersProps {
@@ -28,14 +30,14 @@ interface SearchFiltersProps {
 
 export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
   const [searchText, setSearchText] = useState("");
-  const [categories, setCategories] = useState<string[]>(RESTAURANT_CATEGORIES);
-  const [cities, setCities] = useState<string[]>(CITIES);
-  const [priceRanges, setPriceRanges] = useState<string[]>(PRICE_RANGES);
+  const [categories, setCategories] = useState<RestaurantCategory[]>([...RESTAURANT_CATEGORIES]);
+  const [cities, setCities] = useState<string[]>([...CITIES]);
+  const [priceRanges, setPriceRanges] = useState<PriceRange[]>([...PRICE_RANGES]);
   const [minRating, setMinRating] = useState(0);
   const [isOpenNow, setIsOpenNow] = useState(false);
   const [isFeatured, setIsFeatured] = useState(false);
 
-  const toggleCategory = (category: string) => {
+  const toggleCategory = (category: RestaurantCategory) => {
     setCategories((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
@@ -51,7 +53,7 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
     );
   };
 
-  const togglePriceRange = (range: string) => {
+  const togglePriceRange = (range: PriceRange) => {
     setPriceRanges((prev) =>
       prev.includes(range)
         ? prev.filter((r) => r !== range)
@@ -61,9 +63,9 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
 
   const clearFilters = () => {
     setSearchText("");
-    setCategories(RESTAURANT_CATEGORIES);
-    setCities(CITIES);
-    setPriceRanges(PRICE_RANGES);
+    setCategories([...RESTAURANT_CATEGORIES]);
+    setCities([...CITIES]);
+    setPriceRanges([...PRICE_RANGES]);
     setMinRating(0);
     setIsOpenNow(false);
     setIsFeatured(false);
@@ -75,7 +77,7 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
       search: searchText,
       categories: categories.length === RESTAURANT_CATEGORIES.length ? undefined : categories,
       cities: cities.length === CITIES.length ? undefined : cities,
-      priceRanges: priceRanges.length === PRICE_RANGES.length ? undefined : priceRanges as any,
+      priceRanges: priceRanges.length === PRICE_RANGES.length ? undefined : priceRanges,
       minRating: minRating > 0 ? minRating : undefined,
       isOpenNow: isOpenNow || undefined,
       isFeatured: isFeatured || undefined,

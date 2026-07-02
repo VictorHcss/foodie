@@ -1,4 +1,4 @@
-import type { Restaurant, Review } from "@/lib/types";
+import type { Restaurant, Review, MenuItem, RestaurantCategory, PriceRange } from "@/lib/types";
 
 const cities = [
   "Governador Valadares",
@@ -18,22 +18,6 @@ const neighborhoods = [
   "Santa Mônica",
 ];
 
-const coverImages = [
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad35d6?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
-];
-
-const galleryImages = [
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad35d6?auto=format&fit=crop&q=80&w=400",
-  "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&q=80&w=400",
-  "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=400",
-  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=400",
-];
-
 const staticReviews: Review[] = [
   { id: "r1", restaurantId: "", userId: "u1", userName: "João Silva", rating: 5, comment: "Excelente comida e atendimento!", date: "2026-06-25" },
   { id: "r2", restaurantId: "", userId: "u2", userName: "Maria Santos", rating: 4, comment: "Ótimo preço e qualidade.", date: "2026-06-20" },
@@ -42,14 +26,21 @@ const staticReviews: Review[] = [
   { id: "r5", restaurantId: "", userId: "u5", userName: "Carlos Pereira", rating: 5, comment: "Restaurante muito limpo e organizado.", date: "2026-06-05" },
 ];
 
-const staticMenuItems = [
-  { id: "m1", name: "Pizza Calabresa", description: "Delicioso pizza calabresa preparado com ingredientes frescos e selecionados.", category: "Pizzas", price: 42.50, image: coverImages[0], isAvailable: true, isFeatured: true },
-  { id: "m2", name: "Pizza Margherita", description: "Delicioso pizza margherita preparado com ingredientes frescos e selecionados.", category: "Pizzas", price: 38.00, image: coverImages[1], isAvailable: true, isFeatured: false },
-  { id: "m3", name: "Coca-Cola", description: "Delicioso coca-cola preparado com ingredientes frescos e selecionados.", category: "Bebidas", price: 8.00, image: coverImages[2], isAvailable: true, isFeatured: false },
-  { id: "m4", name: "Pudim", description: "Delicioso pudim preparado com ingredientes frescos e selecionados.", category: "Sobremesas", price: 12.00, image: coverImages[3], isAvailable: true, isFeatured: true },
+const staticMenuItems: MenuItem[] = [
+  { id: "m1", restaurantId: "", name: "Pizza Calabresa", description: "Delicioso pizza calabresa preparado com ingredientes frescos e selecionados.", category: "Pizzas", price: 42.50, image: "", isAvailable: true, isFeatured: true },
+  { id: "m2", restaurantId: "", name: "Pizza Margherita", description: "Delicioso pizza margherita preparado com ingredientes frescos e selecionados.", category: "Pizzas", price: 38.00, image: "", isAvailable: true, isFeatured: false },
+  { id: "m3", restaurantId: "", name: "Coca-Cola", description: "Delicioso coca-cola preparado com ingredientes frescos e selecionados.", category: "Bebidas", price: 8.00, image: "", isAvailable: true, isFeatured: false },
+  { id: "m4", restaurantId: "", name: "Pudim", description: "Delicioso pudim preparado com ingredientes frescos e selecionados.", category: "Sobremesas", price: 12.00, image: "", isAvailable: true, isFeatured: true },
 ];
 
-const restaurantTemplates = [
+interface RestaurantTemplate {
+  name: string;
+  category: RestaurantCategory;
+  priceRange: PriceRange;
+  description: string;
+}
+
+const restaurantTemplates: RestaurantTemplate[] = [
   {
     name: "Pizzaria Napoli",
     category: "Pizza",
@@ -102,8 +93,8 @@ export const restaurants: Restaurant[] = [
     phone: "(33) 98888-1234",
     website: "https://pizzarianapoli.com.br",
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[0],
-    galleryImages: [galleryImages[0], galleryImages[1], galleryImages[2]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "30-45 min",
     deliveryFee: 5,
     freeDelivery: false,
@@ -131,8 +122,8 @@ export const restaurants: Restaurant[] = [
     phone: "(33) 98888-5678",
     website: undefined,
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[1],
-    galleryImages: [galleryImages[1], galleryImages[2], galleryImages[3]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "25-40 min",
     deliveryFee: 0,
     freeDelivery: true,
@@ -160,8 +151,8 @@ export const restaurants: Restaurant[] = [
     phone: "(11) 99999-1234",
     website: "https://sakurasushi.com.br",
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[2],
-    galleryImages: [galleryImages[2], galleryImages[3], galleryImages[0]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "40-60 min",
     deliveryFee: 8,
     freeDelivery: false,
@@ -189,8 +180,8 @@ export const restaurants: Restaurant[] = [
     phone: "(21) 99999-5678",
     website: undefined,
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[3],
-    galleryImages: [galleryImages[3], galleryImages[0], galleryImages[1]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "45-75 min",
     deliveryFee: 10,
     freeDelivery: false,
@@ -218,8 +209,8 @@ export const restaurants: Restaurant[] = [
     phone: "(27) 99999-1234",
     website: "https://restaurantemineiro.com.br",
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[4],
-    galleryImages: [galleryImages[0], galleryImages[2], galleryImages[3]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "35-55 min",
     deliveryFee: 3,
     freeDelivery: true,
@@ -247,8 +238,8 @@ export const restaurants: Restaurant[] = [
     phone: "(41) 99999-5678",
     website: undefined,
     openingHours: ["Seg-Sex: 11:00-22:00", "Sáb: 11:00-23:00", "Dom: 12:00-22:00"],
-    coverImage: coverImages[5],
-    galleryImages: [galleryImages[1], galleryImages[3], galleryImages[0]],
+    coverImage: "",
+    galleryImages: [],
     deliveryTime: "30-50 min",
     deliveryFee: 6,
     freeDelivery: false,
@@ -260,7 +251,7 @@ export const restaurants: Restaurant[] = [
   },
 ];
 
-export const getRestaurantById = (id: string) =>
+export const getRestaurantById = (id: string): Restaurant | undefined =>
   restaurants.find((restaurant) => restaurant.id === id);
 
-export const getRestaurants = () => restaurants;
+export const getRestaurants = (): Restaurant[] => restaurants;

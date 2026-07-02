@@ -40,6 +40,7 @@ export default function OrdersPage() {
   }
 
   const handleCancelOrder = (orderId: string) => {
+    if (!authState.user) return
     const updated = cancelOrder(orderId)
     if (updated) {
       setOrders(getOrdersByUserId(authState.user.id))

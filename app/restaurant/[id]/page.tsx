@@ -100,9 +100,7 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
     );
   }
 
-  const categoryLabel = restaurant.category
-    ? (CATEGORY_LABELS as any)[restaurant.category] || restaurant.category
-    : "Restaurante";
+  const categoryLabel = CATEGORY_LABELS[restaurant.category];
 
   // Group menu items by category
   const menuByCategory = restaurant.menu.reduce(

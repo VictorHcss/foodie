@@ -1,20 +1,23 @@
 import { NextResponse } from "next/server"
-import reviewsData from "@/data/reviews.json"
+import { getRestaurantById } from "@/data/restaurants"
 import type { Review } from "@/lib/types"
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  let reviews: Review[] = reviewsData as Review[]
-  reviews = reviews.filter((review) => review.restaurantId === id)
-  return NextResponse.json(reviews)
+  const restaurant = getRestaurantById(id)
+  if (!restaurant) {
+    return NextResponse.json({ error: "Restaurant not found" }, { status: 404 })
+  }
+  return NextResponse.json(restaurant.reviews)
 }
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const body = await request.json()
   const newReview: Review = {
-    id: Date.now().toString(),
+    id: "review-" + Date.now().toString(),
     restaurantId: id,
+    userId: body.userId || "user-1",
     userName: body.userName,
     rating: body.rating,
     comment: body.comment || "",

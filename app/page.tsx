@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { RestaurantCard } from "@/components/restaurant-card";
 import { SearchFilters } from "@/components/search-filters";
 import { AppHeader } from "@/components/app-header";
-import { restaurantService } from "@/services/restaurant-service";
+import { restaurantService } from "@/services/restaurantService";
 import type { Restaurant, SearchFilters as SearchFiltersType } from "@/lib/types";
 import { Loader2, Heart } from "lucide-react";
 import { useAuth } from "@/contexts/auth-context";

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Restaurant } from "@/lib/types";
-import { CATEGORY_LABELS } from "@/lib/types";
+import { CATEGORY_LABELS, RESTAURANT_CATEGORIES } from "@/lib/types";
 import { useAuth } from "@/contexts/auth-context";
 
 interface RestaurantCardProps {
@@ -18,9 +18,7 @@ export function RestaurantCard({ restaurant, onClick }: RestaurantCardProps) {
   const { state: authState, toggleFavorite } = useAuth();
   const isFavorite = authState.user?.favoriteRestaurantIds.includes(restaurant.id) || false;
 
-  const categoryLabel = restaurant.category
-    ? CATEGORY_LABELS[restaurant.category as any] || restaurant.category
-    : "Restaurante";
+  const categoryLabel = CATEGORY_LABELS[restaurant.category];
 
   const handleFavoriteClick = (e: React.MouseEvent) => {
     e.stopPropagation();

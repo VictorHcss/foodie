@@ -15,7 +15,7 @@ export interface Restaurant {
   id: string;
   name: string;
   description: string;
-  category: string;
+  category: RestaurantCategory;
   priceRange: PriceRange;
   rating: number;
   reviewCount: number;
@@ -116,7 +116,7 @@ export interface Order {
 // Filter and Search Types
 export interface SearchFilters {
   search?: string;
-  categories?: string[];
+  categories?: RestaurantCategory[];
   cities?: string[];
   priceRanges?: PriceRange[];
   minRating?: number;

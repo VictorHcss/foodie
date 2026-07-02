@@ -5,6 +5,7 @@ import { ArrowLeft, Star, Clock, DollarSign, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import type { Restaurant } from "@/lib/types"
+import { CATEGORY_LABELS } from "@/lib/types"
 
 interface RestaurantHeaderProps {
   restaurant: Restaurant
@@ -12,11 +13,19 @@ interface RestaurantHeaderProps {
 }
 
 export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) {
+  const categoryLabel = CATEGORY_LABELS[restaurant.category]
+
   return (
     <div className="relative">
       {/* Hero Image */}
-      <div className="relative h-64 md:h-80 overflow-hidden">
-        <Image src={restaurant.image || "/placeholder.svg"} alt={restaurant.name} fill className="object-cover" />
+      <div className="relative h-64 md:h-80 overflow-hidden bg-gray-100">
+        {restaurant.coverImage ? (
+          <Image src={restaurant.coverImage} alt={restaurant.name} fill className="object-cover" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-gray-400 text-6xl">🍽️</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
         {/* Back Button */}
@@ -35,18 +44,22 @@ export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) 
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <Badge variant="secondary" className="bg-white/90 text-foreground">
-                {restaurant.cuisine}
+                {categoryLabel}
               </Badge>
             </div>
 
             <h1 className="font-serif font-bold text-3xl md:text-4xl">{restaurant.name}</h1>
 
             <div className="flex flex-wrap items-center gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="font-medium">{restaurant.rating}</span>
-                <span className="text-white/80">({restaurant.reviewCount} avaliações)</span>
-              </div>
+              {restaurant.rating !== undefined && (
+                <div className="flex items-center gap-1">
+                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  <span className="font-medium">{restaurant.rating.toFixed(1)}</span>
+                  {restaurant.reviewCount !== undefined && (
+                    <span className="text-white/80">({restaurant.reviewCount} avaliações)</span>
+                  )}
+                </div>
+              )}
 
               <div className="flex items-center gap-1 text-white/80">
                 <Clock className="h-4 w-4" />
@@ -55,7 +68,7 @@ export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) 
 
               <div className="flex items-center gap-1 text-white/80">
                 <DollarSign className="h-4 w-4" />
-                <span>R$ {restaurant.averagePrice} média</span>
+                <span>{restaurant.priceRange}</span>
               </div>
 
               <div className="flex items-center gap-1 text-white/80">
@@ -72,7 +85,9 @@ export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) 
         <div className="container mx-auto">
           <div className="flex items-center justify-between text-sm">
             <span className="text-muted-foreground">Taxa de entrega:</span>
-            <span className="font-medium text-primary">R$ {restaurant.deliveryFee.toFixed(2)}</span>
+            <span className="font-medium text-primary">
+              {restaurant.freeDelivery ? "Grátis" : `R$ ${restaurant.deliveryFee.toFixed(2)}`}
+            </span>
           </div>
         </div>
       </div>

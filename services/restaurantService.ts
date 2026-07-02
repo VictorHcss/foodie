@@ -7,10 +7,18 @@ export const restaurantService = {
     restaurants.find((r) => r.id === id),
   search: (filters: SearchFilters): Restaurant[] => {
     let results = [...restaurants];
+    const search = filters.search;
+    const categories = filters.categories;
+    const cities = filters.cities;
+    const priceRanges = filters.priceRanges;
+    const minRating = filters.minRating;
+    const isOpenNow = filters.isOpenNow;
+    const isFeatured = filters.isFeatured;
+    const sortBy = filters.sortBy;
 
     // Search by name, description, tags
-    if (filters.search) {
-      const searchLower = filters.search.toLowerCase();
+    if (search) {
+      const searchLower = search.toLowerCase();
       results = results.filter(
         (r) =>
           r.name.toLowerCase().includes(searchLower) ||
@@ -21,42 +29,38 @@ export const restaurantService = {
     }
 
     // Filter by categories
-    if (filters.categories && filters.categories.length > 0) {
-      results = results.filter((r) =>
-        filters.categories!.includes(r.category)
-      );
+    if (categories && categories.length > 0) {
+      results = results.filter((r) => categories.includes(r.category));
     }
 
     // Filter by cities
-    if (filters.cities && filters.cities.length > 0) {
-      results = results.filter((r) => filters.cities!.includes(r.city));
+    if (cities && cities.length > 0) {
+      results = results.filter((r) => cities.includes(r.city));
     }
 
     // Filter by price ranges
-    if (filters.priceRanges && filters.priceRanges.length > 0) {
-      results = results.filter((r) =>
-        filters.priceRanges!.includes(r.priceRange)
-      );
+    if (priceRanges && priceRanges.length > 0) {
+      results = results.filter((r) => priceRanges.includes(r.priceRange));
     }
 
     // Filter by minimum rating
-    if (filters.minRating) {
-      results = results.filter((r) => r.rating >= filters.minRating);
+    if (typeof minRating === "number") {
+      results = results.filter((r) => r.rating >= minRating);
     }
 
     // Filter by open now
-    if (filters.isOpenNow) {
+    if (isOpenNow) {
       results = results.filter((r) => r.isOpenNow);
     }
 
     // Filter by featured
-    if (filters.isFeatured) {
+    if (isFeatured) {
       results = results.filter((r) => r.isFeatured);
     }
 
     // Sort
-    if (filters.sortBy) {
-      switch (filters.sortBy) {
+    if (sortBy) {
+      switch (sortBy) {
         case "rating":
           results.sort((a, b) => b.rating - a.rating);
           break;

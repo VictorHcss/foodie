@@ -1,44 +1,33 @@
 import { NextResponse } from "next/server"
-import restaurantsData from "@/data/restaurants.json"
-import type { Restaurant } from "@/lib/types"
+import { restaurantService } from "@/services/restaurantService"
+import { RESTAURANT_CATEGORIES } from "@/lib/types"
+import type { SearchFilters } from "@/lib/types"
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
-  const search = searchParams.get("search")?.toLowerCase()
-  const cuisine = searchParams.get("cuisine")
-  const neighborhood = searchParams.get("neighborhood")
+  const search = searchParams.get("search")
+  const category = searchParams.get("category")
+  const city = searchParams.get("city")
   const minRating = searchParams.get("minRating")
-  const maxPrice = searchParams.get("maxPrice")
-
-  let restaurants: Restaurant[] = restaurantsData as Restaurant[]
-
-  // Apply filters
+  
+  const filters: SearchFilters = {}
+  
   if (search) {
-    restaurants = restaurants.filter(
-      (restaurant) =>
-        restaurant.name.toLowerCase().includes(search) ||
-        restaurant.cuisine.toLowerCase().includes(search) ||
-        restaurant.neighborhood.toLowerCase().includes(search),
-    )
+    filters.search = search
   }
-
-  if (cuisine) {
-    restaurants = restaurants.filter((restaurant) => restaurant.cuisine.toLowerCase() === cuisine.toLowerCase())
+  
+  if (category && RESTAURANT_CATEGORIES.includes(category as any)) {
+    filters.categories = [category as any]
   }
-
-  if (neighborhood) {
-    restaurants = restaurants.filter(
-      (restaurant) => restaurant.neighborhood.toLowerCase() === neighborhood.toLowerCase(),
-    )
+  
+  if (city) {
+    filters.cities = [city]
   }
-
+  
   if (minRating) {
-    restaurants = restaurants.filter((restaurant) => restaurant.rating >= Number.parseFloat(minRating))
+    filters.minRating = parseFloat(minRating)
   }
 
-  if (maxPrice) {
-    restaurants = restaurants.filter((restaurant) => restaurant.averagePrice <= Number.parseFloat(maxPrice))
-  }
-
+  const restaurants = restaurantService.search(filters)
   return NextResponse.json(restaurants)
 }

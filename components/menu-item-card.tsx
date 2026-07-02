@@ -32,13 +32,19 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
             </div>
           </div>
 
-          <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md">
-            <Image
-              src={item.image || "/placeholder.svg"}
-              alt={item.name}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-110"
-            />
+          <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-gray-100">
+            {item.image ? (
+              <Image
+                src={item.image}
+                alt={item.name}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-gray-400 text-2xl">🍽️</span>
+              </div>
+            )}
           </div>
         </div>
       </CardContent>
