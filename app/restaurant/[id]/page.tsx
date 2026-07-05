@@ -66,16 +66,12 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
     if (!restaurant) return;
 
     addItem({
-      id: product.id,
-      menuItem: {
-        ...product,
-        name: product.nome,
-        description: product.descricao,
-        isAvailable: product.disponivel,
-        image: product.imagem,
-        isFeatured: product.destaque,
-      },
-      restaurantId: restaurant.id,
+      ...product,
+      name: product.nome,
+      description: product.descricao,
+      isAvailable: product.disponivel,
+      image: product.imagem,
+      isFeatured: product.destaque,
     } as any, restaurant.id);
     
     toast({

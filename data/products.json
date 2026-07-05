@@ -25,7 +25,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-01.jpg",
+    "image": "/images/categories/pizza/item-01.jpg"
   },
   {
     "id": "produto-002",
@@ -48,7 +49,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-02.jpg",
+    "image": "/images/categories/pizza/item-02.jpg"
   },
   {
     "id": "produto-003",
@@ -76,7 +78,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-03.jpg",
+    "image": "/images/categories/pizza/item-03.jpg"
   },
   {
     "id": "produto-004",
@@ -109,7 +112,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-04.jpg",
+    "image": "/images/categories/pizza/item-04.jpg"
   },
   {
     "id": "produto-005",
@@ -142,7 +146,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-05.jpg",
+    "image": "/images/categories/pizza/item-05.jpg"
   },
   {
     "id": "produto-006",
@@ -175,7 +180,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-06.jpg",
+    "image": "/images/categories/pizza/item-06.jpg"
   },
   {
     "id": "produto-007",
@@ -203,7 +209,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-07.jpg",
+    "image": "/images/categories/pizza/item-07.jpg"
   },
   {
     "id": "produto-008",
@@ -236,7 +243,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-08.jpg",
+    "image": "/images/categories/pizza/item-08.jpg"
   },
   {
     "id": "produto-009",
@@ -264,7 +272,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-09.jpg",
+    "image": "/images/categories/pizza/item-09.jpg"
   },
   {
     "id": "produto-010",
@@ -297,7 +306,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-10.jpg",
+    "image": "/images/categories/pizza/item-10.jpg"
   },
   {
     "id": "produto-011",
@@ -330,7 +340,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-11.jpg",
+    "image": "/images/categories/pizza/item-11.jpg"
   },
   {
     "id": "produto-012",
@@ -363,7 +374,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-12.jpg",
+    "image": "/images/categories/pizza/item-12.jpg"
   },
   {
     "id": "produto-013",
@@ -391,7 +403,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-13.jpg",
+    "image": "/images/categories/pizza/item-13.jpg"
   },
   {
     "id": "produto-014",
@@ -414,7 +427,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-14.jpg",
+    "image": "/images/categories/pizza/item-14.jpg"
   },
   {
     "id": "produto-015",
@@ -447,7 +461,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-15.jpg",
+    "image": "/images/categories/pizza/item-15.jpg"
   },
   {
     "id": "produto-016",
@@ -470,7 +485,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/1.jpg"
+    "imagem": "/images/categories/pizza/item-16.jpg",
+    "image": "/images/categories/pizza/item-16.jpg"
   },
   {
     "id": "produto-017",
@@ -503,7 +519,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/2.jpg"
+    "imagem": "/images/categories/pizza/item-17.jpg",
+    "image": "/images/categories/pizza/item-17.jpg"
   },
   {
     "id": "produto-018",
@@ -526,7 +543,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/pizza/3.jpg"
+    "imagem": "/images/categories/pizza/item-18.jpg",
+    "image": "/images/categories/pizza/item-18.jpg"
   },
   {
     "id": "produto-019",
@@ -554,7 +572,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-01.jpg",
+    "image": "/images/categories/hamburguer/item-01.jpg"
   },
   {
     "id": "produto-020",
@@ -577,7 +596,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-02.jpg",
+    "image": "/images/categories/hamburguer/item-02.jpg"
   },
   {
     "id": "produto-021",
@@ -610,7 +630,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-03.jpg",
+    "image": "/images/categories/hamburguer/item-03.jpg"
   },
   {
     "id": "produto-022",
@@ -643,7 +664,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-04.jpg",
+    "image": "/images/categories/hamburguer/item-04.jpg"
   },
   {
     "id": "produto-023",
@@ -671,7 +693,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-05.jpg",
+    "image": "/images/categories/hamburguer/item-05.jpg"
   },
   {
     "id": "produto-024",
@@ -704,7 +727,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-06.jpg",
+    "image": "/images/categories/hamburguer/item-06.jpg"
   },
   {
     "id": "produto-025",
@@ -737,7 +761,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-07.jpg",
+    "image": "/images/categories/hamburguer/item-07.jpg"
   },
   {
     "id": "produto-026",
@@ -765,7 +790,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-08.jpg",
+    "image": "/images/categories/hamburguer/item-08.jpg"
   },
   {
     "id": "produto-027",
@@ -793,7 +819,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-09.jpg",
+    "image": "/images/categories/hamburguer/item-09.jpg"
   },
   {
     "id": "produto-028",
@@ -826,7 +853,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-10.jpg",
+    "image": "/images/categories/hamburguer/item-10.jpg"
   },
   {
     "id": "produto-029",
@@ -849,7 +877,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-11.jpg",
+    "image": "/images/categories/hamburguer/item-11.jpg"
   },
   {
     "id": "produto-030",
@@ -877,7 +906,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-12.jpg",
+    "image": "/images/categories/hamburguer/item-12.jpg"
   },
   {
     "id": "produto-031",
@@ -910,7 +940,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-13.jpg",
+    "image": "/images/categories/hamburguer/item-13.jpg"
   },
   {
     "id": "produto-032",
@@ -938,7 +969,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-14.jpg",
+    "image": "/images/categories/hamburguer/item-14.jpg"
   },
   {
     "id": "produto-033",
@@ -971,7 +1003,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-15.jpg",
+    "image": "/images/categories/hamburguer/item-15.jpg"
   },
   {
     "id": "produto-034",
@@ -1004,7 +1037,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/1.jpg"
+    "imagem": "/images/categories/hamburguer/item-16.jpg",
+    "image": "/images/categories/hamburguer/item-16.jpg"
   },
   {
     "id": "produto-035",
@@ -1032,7 +1066,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/2.jpg"
+    "imagem": "/images/categories/hamburguer/item-17.jpg",
+    "image": "/images/categories/hamburguer/item-17.jpg"
   },
   {
     "id": "produto-036",
@@ -1060,7 +1095,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/hamburguer/3.jpg"
+    "imagem": "/images/categories/hamburguer/item-18.jpg",
+    "image": "/images/categories/hamburguer/item-18.jpg"
   },
   {
     "id": "produto-037",
@@ -1093,7 +1129,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-01.jpg",
+    "image": "/images/categories/sushi/item-01.jpg"
   },
   {
     "id": "produto-038",
@@ -1121,7 +1158,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-02.jpg",
+    "image": "/images/categories/sushi/item-02.jpg"
   },
   {
     "id": "produto-039",
@@ -1149,7 +1187,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-03.jpg",
+    "image": "/images/categories/sushi/item-03.jpg"
   },
   {
     "id": "produto-040",
@@ -1166,7 +1205,8 @@
     "adicionais": [],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-04.jpg",
+    "image": "/images/categories/sushi/item-04.jpg"
   },
   {
     "id": "produto-041",
@@ -1194,7 +1234,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-05.jpg",
+    "image": "/images/categories/sushi/item-05.jpg"
   },
   {
     "id": "produto-042",
@@ -1227,7 +1268,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-06.jpg",
+    "image": "/images/categories/sushi/item-06.jpg"
   },
   {
     "id": "produto-043",
@@ -1250,7 +1292,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-07.jpg",
+    "image": "/images/categories/sushi/item-07.jpg"
   },
   {
     "id": "produto-044",
@@ -1283,7 +1326,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-08.jpg",
+    "image": "/images/categories/sushi/item-08.jpg"
   },
   {
     "id": "produto-045",
@@ -1316,7 +1360,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-09.jpg",
+    "image": "/images/categories/sushi/item-09.jpg"
   },
   {
     "id": "produto-046",
@@ -1344,7 +1389,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-10.jpg",
+    "image": "/images/categories/sushi/item-10.jpg"
   },
   {
     "id": "produto-047",
@@ -1377,7 +1423,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-11.jpg",
+    "image": "/images/categories/sushi/item-11.jpg"
   },
   {
     "id": "produto-048",
@@ -1410,7 +1457,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-12.jpg",
+    "image": "/images/categories/sushi/item-12.jpg"
   },
   {
     "id": "produto-049",
@@ -1438,7 +1486,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-13.jpg",
+    "image": "/images/categories/sushi/item-13.jpg"
   },
   {
     "id": "produto-050",
@@ -1466,7 +1515,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-14.jpg",
+    "image": "/images/categories/sushi/item-14.jpg"
   },
   {
     "id": "produto-051",
@@ -1499,7 +1549,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-15.jpg",
+    "image": "/images/categories/sushi/item-15.jpg"
   },
   {
     "id": "produto-052",
@@ -1532,7 +1583,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/sushi/1.jpg"
+    "imagem": "/images/categories/sushi/item-16.jpg",
+    "image": "/images/categories/sushi/item-16.jpg"
   },
   {
     "id": "produto-053",
@@ -1565,7 +1617,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sushi/2.jpg"
+    "imagem": "/images/categories/sushi/item-17.jpg",
+    "image": "/images/categories/sushi/item-17.jpg"
   },
   {
     "id": "produto-054",
@@ -1598,7 +1651,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/sushi/3.jpg"
+    "imagem": "/images/categories/sushi/item-18.jpg",
+    "image": "/images/categories/sushi/item-18.jpg"
   },
   {
     "id": "produto-055",
@@ -1626,7 +1680,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/1.jpg"
+    "imagem": "/images/categories/padaria/item-01.jpg",
+    "image": "/images/categories/padaria/item-01.jpg"
   },
   {
     "id": "produto-056",
@@ -1654,7 +1709,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/2.jpg"
+    "imagem": "/images/categories/padaria/item-02.jpg",
+    "image": "/images/categories/padaria/item-02.jpg"
   },
   {
     "id": "produto-057",
@@ -1687,7 +1743,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/3.jpg"
+    "imagem": "/images/categories/padaria/item-03.jpg",
+    "image": "/images/categories/padaria/item-03.jpg"
   },
   {
     "id": "produto-058",
@@ -1715,7 +1772,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/1.jpg"
+    "imagem": "/images/categories/padaria/item-04.jpg",
+    "image": "/images/categories/padaria/item-04.jpg"
   },
   {
     "id": "produto-059",
@@ -1748,7 +1806,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/2.jpg"
+    "imagem": "/images/categories/padaria/item-05.jpg",
+    "image": "/images/categories/padaria/item-05.jpg"
   },
   {
     "id": "produto-060",
@@ -1776,7 +1835,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/3.jpg"
+    "imagem": "/images/categories/padaria/item-06.jpg",
+    "image": "/images/categories/padaria/item-06.jpg"
   },
   {
     "id": "produto-061",
@@ -1809,7 +1869,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/1.jpg"
+    "imagem": "/images/categories/padaria/item-07.jpg",
+    "image": "/images/categories/padaria/item-07.jpg"
   },
   {
     "id": "produto-062",
@@ -1842,7 +1903,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/2.jpg"
+    "imagem": "/images/categories/padaria/item-08.jpg",
+    "image": "/images/categories/padaria/item-08.jpg"
   },
   {
     "id": "produto-063",
@@ -1875,7 +1937,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/3.jpg"
+    "imagem": "/images/categories/padaria/item-09.jpg",
+    "image": "/images/categories/padaria/item-09.jpg"
   },
   {
     "id": "produto-064",
@@ -1903,7 +1966,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/1.jpg"
+    "imagem": "/images/categories/padaria/item-10.jpg",
+    "image": "/images/categories/padaria/item-10.jpg"
   },
   {
     "id": "produto-065",
@@ -1936,7 +2000,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/2.jpg"
+    "imagem": "/images/categories/padaria/item-11.jpg",
+    "image": "/images/categories/padaria/item-11.jpg"
   },
   {
     "id": "produto-066",
@@ -1969,7 +2034,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/padaria/3.jpg"
+    "imagem": "/images/categories/padaria/item-12.jpg",
+    "image": "/images/categories/padaria/item-12.jpg"
   },
   {
     "id": "produto-067",
@@ -2002,7 +2068,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-01.jpg",
+    "image": "/images/categories/churrasco/item-01.jpg"
   },
   {
     "id": "produto-068",
@@ -2035,7 +2102,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-02.jpg",
+    "image": "/images/categories/churrasco/item-02.jpg"
   },
   {
     "id": "produto-069",
@@ -2063,7 +2131,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-03.jpg",
+    "image": "/images/categories/churrasco/item-03.jpg"
   },
   {
     "id": "produto-070",
@@ -2096,7 +2165,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-04.jpg",
+    "image": "/images/categories/churrasco/item-04.jpg"
   },
   {
     "id": "produto-071",
@@ -2129,7 +2199,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-05.jpg",
+    "image": "/images/categories/churrasco/item-05.jpg"
   },
   {
     "id": "produto-072",
@@ -2157,7 +2228,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-06.jpg",
+    "image": "/images/categories/churrasco/item-06.jpg"
   },
   {
     "id": "produto-073",
@@ -2185,7 +2257,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-07.jpg",
+    "image": "/images/categories/churrasco/item-07.jpg"
   },
   {
     "id": "produto-074",
@@ -2218,7 +2291,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-08.jpg",
+    "image": "/images/categories/churrasco/item-08.jpg"
   },
   {
     "id": "produto-075",
@@ -2246,7 +2320,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-09.jpg",
+    "image": "/images/categories/churrasco/item-09.jpg"
   },
   {
     "id": "produto-076",
@@ -2279,7 +2354,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-10.jpg",
+    "image": "/images/categories/churrasco/item-10.jpg"
   },
   {
     "id": "produto-077",
@@ -2307,7 +2383,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-11.jpg",
+    "image": "/images/categories/churrasco/item-11.jpg"
   },
   {
     "id": "produto-078",
@@ -2340,7 +2417,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-12.jpg",
+    "image": "/images/categories/churrasco/item-12.jpg"
   },
   {
     "id": "produto-079",
@@ -2363,7 +2441,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-13.jpg",
+    "image": "/images/categories/churrasco/item-13.jpg"
   },
   {
     "id": "produto-080",
@@ -2396,7 +2475,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-14.jpg",
+    "image": "/images/categories/churrasco/item-14.jpg"
   },
   {
     "id": "produto-081",
@@ -2429,7 +2509,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-15.jpg",
+    "image": "/images/categories/churrasco/item-15.jpg"
   },
   {
     "id": "produto-082",
@@ -2457,7 +2538,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/1.jpg"
+    "imagem": "/images/categories/churrasco/item-01.jpg",
+    "image": "/images/categories/churrasco/item-01.jpg"
   },
   {
     "id": "produto-083",
@@ -2485,7 +2567,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/2.jpg"
+    "imagem": "/images/categories/churrasco/item-02.jpg",
+    "image": "/images/categories/churrasco/item-02.jpg"
   },
   {
     "id": "produto-084",
@@ -2518,7 +2601,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/churrasco/3.jpg"
+    "imagem": "/images/categories/churrasco/item-03.jpg",
+    "image": "/images/categories/churrasco/item-03.jpg"
   },
   {
     "id": "produto-085",
@@ -2541,7 +2625,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/1.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-086",
@@ -2569,7 +2654,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/2.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-087",
@@ -2597,7 +2683,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/3.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-088",
@@ -2630,7 +2717,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/1.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-089",
@@ -2658,7 +2746,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/2.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-090",
@@ -2691,7 +2780,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/3.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-091",
@@ -2724,7 +2814,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/1.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-092",
@@ -2757,7 +2848,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/2.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-093",
@@ -2790,7 +2882,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/3.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-094",
@@ -2823,7 +2916,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/1.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-095",
@@ -2846,7 +2940,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/2.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-096",
@@ -2879,7 +2974,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/brasileira/3.jpg"
+    "imagem": "/images/categories/brasileira/undefined",
+    "image": "/images/categories/brasileira/undefined"
   },
   {
     "id": "produto-097",
@@ -2907,7 +3003,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-01.jpg",
+    "image": "/images/categories/mineira/item-01.jpg"
   },
   {
     "id": "produto-098",
@@ -2935,7 +3032,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-02.jpg",
+    "image": "/images/categories/mineira/item-02.jpg"
   },
   {
     "id": "produto-099",
@@ -2968,7 +3066,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-03.jpg",
+    "image": "/images/categories/mineira/item-03.jpg"
   },
   {
     "id": "produto-100",
@@ -3001,7 +3100,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-04.jpg",
+    "image": "/images/categories/mineira/item-04.jpg"
   },
   {
     "id": "produto-101",
@@ -3034,7 +3134,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-05.jpg",
+    "image": "/images/categories/mineira/item-05.jpg"
   },
   {
     "id": "produto-102",
@@ -3057,7 +3158,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-06.jpg",
+    "image": "/images/categories/mineira/item-06.jpg"
   },
   {
     "id": "produto-103",
@@ -3080,7 +3182,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-07.jpg",
+    "image": "/images/categories/mineira/item-07.jpg"
   },
   {
     "id": "produto-104",
@@ -3113,7 +3216,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-08.jpg",
+    "image": "/images/categories/mineira/item-08.jpg"
   },
   {
     "id": "produto-105",
@@ -3141,7 +3245,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-09.jpg",
+    "image": "/images/categories/mineira/item-09.jpg"
   },
   {
     "id": "produto-106",
@@ -3174,7 +3279,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-10.jpg",
+    "image": "/images/categories/mineira/item-10.jpg"
   },
   {
     "id": "produto-107",
@@ -3207,7 +3313,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-11.jpg",
+    "image": "/images/categories/mineira/item-11.jpg"
   },
   {
     "id": "produto-108",
@@ -3240,7 +3347,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-12.jpg",
+    "image": "/images/categories/mineira/item-12.jpg"
   },
   {
     "id": "produto-109",
@@ -3273,7 +3381,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-13.jpg",
+    "image": "/images/categories/mineira/item-13.jpg"
   },
   {
     "id": "produto-110",
@@ -3306,7 +3415,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-14.jpg",
+    "image": "/images/categories/mineira/item-14.jpg"
   },
   {
     "id": "produto-111",
@@ -3339,7 +3449,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-15.jpg",
+    "image": "/images/categories/mineira/item-15.jpg"
   },
   {
     "id": "produto-112",
@@ -3372,7 +3483,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/1.jpg"
+    "imagem": "/images/categories/mineira/item-01.jpg",
+    "image": "/images/categories/mineira/item-01.jpg"
   },
   {
     "id": "produto-113",
@@ -3405,7 +3517,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/2.jpg"
+    "imagem": "/images/categories/mineira/item-02.jpg",
+    "image": "/images/categories/mineira/item-02.jpg"
   },
   {
     "id": "produto-114",
@@ -3438,7 +3551,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mineira/3.jpg"
+    "imagem": "/images/categories/mineira/item-03.jpg",
+    "image": "/images/categories/mineira/item-03.jpg"
   },
   {
     "id": "produto-115",
@@ -3455,7 +3569,8 @@
     "adicionais": [],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/1.jpg"
+    "imagem": "/images/categories/mexicana/item-01.jpg",
+    "image": "/images/categories/mexicana/item-01.jpg"
   },
   {
     "id": "produto-116",
@@ -3488,7 +3603,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/2.jpg"
+    "imagem": "/images/categories/mexicana/item-02.jpg",
+    "image": "/images/categories/mexicana/item-02.jpg"
   },
   {
     "id": "produto-117",
@@ -3521,7 +3637,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/3.jpg"
+    "imagem": "/images/categories/mexicana/item-03.jpg",
+    "image": "/images/categories/mexicana/item-03.jpg"
   },
   {
     "id": "produto-118",
@@ -3554,7 +3671,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/1.jpg"
+    "imagem": "/images/categories/mexicana/item-04.jpg",
+    "image": "/images/categories/mexicana/item-04.jpg"
   },
   {
     "id": "produto-119",
@@ -3582,7 +3700,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/2.jpg"
+    "imagem": "/images/categories/mexicana/item-05.jpg",
+    "image": "/images/categories/mexicana/item-05.jpg"
   },
   {
     "id": "produto-120",
@@ -3615,7 +3734,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/3.jpg"
+    "imagem": "/images/categories/mexicana/item-06.jpg",
+    "image": "/images/categories/mexicana/item-06.jpg"
   },
   {
     "id": "produto-121",
@@ -3648,7 +3768,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/1.jpg"
+    "imagem": "/images/categories/mexicana/item-07.jpg",
+    "image": "/images/categories/mexicana/item-07.jpg"
   },
   {
     "id": "produto-122",
@@ -3681,7 +3802,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/2.jpg"
+    "imagem": "/images/categories/mexicana/item-08.jpg",
+    "image": "/images/categories/mexicana/item-08.jpg"
   },
   {
     "id": "produto-123",
@@ -3709,7 +3831,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/mexicana/3.jpg"
+    "imagem": "/images/categories/mexicana/item-09.jpg",
+    "image": "/images/categories/mexicana/item-09.jpg"
   },
   {
     "id": "produto-124",
@@ -3742,7 +3865,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/1.jpg"
+    "imagem": "/images/categories/mexicana/item-10.jpg",
+    "image": "/images/categories/mexicana/item-10.jpg"
   },
   {
     "id": "produto-125",
@@ -3765,7 +3889,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/2.jpg"
+    "imagem": "/images/categories/mexicana/item-11.jpg",
+    "image": "/images/categories/mexicana/item-11.jpg"
   },
   {
     "id": "produto-126",
@@ -3798,7 +3923,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/mexicana/3.jpg"
+    "imagem": "/images/categories/mexicana/item-12.jpg",
+    "image": "/images/categories/mexicana/item-12.jpg"
   },
   {
     "id": "produto-127",
@@ -3831,7 +3957,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/1.jpg"
+    "imagem": "/images/categories/arabe/item-01.jpg",
+    "image": "/images/categories/arabe/item-01.jpg"
   },
   {
     "id": "produto-128",
@@ -3859,7 +3986,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/2.jpg"
+    "imagem": "/images/categories/arabe/item-02.jpg",
+    "image": "/images/categories/arabe/item-02.jpg"
   },
   {
     "id": "produto-129",
@@ -3892,7 +4020,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/3.jpg"
+    "imagem": "/images/categories/arabe/item-03.jpg",
+    "image": "/images/categories/arabe/item-03.jpg"
   },
   {
     "id": "produto-130",
@@ -3925,7 +4054,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/1.jpg"
+    "imagem": "/images/categories/arabe/item-04.jpg",
+    "image": "/images/categories/arabe/item-04.jpg"
   },
   {
     "id": "produto-131",
@@ -3958,7 +4088,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/arabe/2.jpg"
+    "imagem": "/images/categories/arabe/item-05.jpg",
+    "image": "/images/categories/arabe/item-05.jpg"
   },
   {
     "id": "produto-132",
@@ -3986,7 +4117,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/3.jpg"
+    "imagem": "/images/categories/arabe/item-06.jpg",
+    "image": "/images/categories/arabe/item-06.jpg"
   },
   {
     "id": "produto-133",
@@ -4019,7 +4151,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/1.jpg"
+    "imagem": "/images/categories/arabe/item-07.jpg",
+    "image": "/images/categories/arabe/item-07.jpg"
   },
   {
     "id": "produto-134",
@@ -4052,7 +4185,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/2.jpg"
+    "imagem": "/images/categories/arabe/item-08.jpg",
+    "image": "/images/categories/arabe/item-08.jpg"
   },
   {
     "id": "produto-135",
@@ -4085,7 +4219,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/3.jpg"
+    "imagem": "/images/categories/arabe/item-09.jpg",
+    "image": "/images/categories/arabe/item-09.jpg"
   },
   {
     "id": "produto-136",
@@ -4118,7 +4253,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/1.jpg"
+    "imagem": "/images/categories/arabe/item-10.jpg",
+    "image": "/images/categories/arabe/item-10.jpg"
   },
   {
     "id": "produto-137",
@@ -4151,7 +4287,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/2.jpg"
+    "imagem": "/images/categories/arabe/item-11.jpg",
+    "image": "/images/categories/arabe/item-11.jpg"
   },
   {
     "id": "produto-138",
@@ -4179,7 +4316,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/arabe/3.jpg"
+    "imagem": "/images/categories/arabe/item-12.jpg",
+    "image": "/images/categories/arabe/item-12.jpg"
   },
   {
     "id": "produto-139",
@@ -4212,7 +4350,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/1.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-140",
@@ -4245,7 +4384,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/oriental/2.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-141",
@@ -4278,7 +4418,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/3.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-142",
@@ -4311,7 +4452,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/1.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-143",
@@ -4339,7 +4481,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/2.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-144",
@@ -4372,7 +4515,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/3.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-145",
@@ -4405,7 +4549,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/1.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-146",
@@ -4433,7 +4578,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/2.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-147",
@@ -4466,7 +4612,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/3.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-148",
@@ -4499,7 +4646,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/1.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-149",
@@ -4532,7 +4680,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/2.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-150",
@@ -4560,7 +4709,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/oriental/3.jpg"
+    "imagem": "/images/categories/oriental/undefined",
+    "image": "/images/categories/oriental/undefined"
   },
   {
     "id": "produto-151",
@@ -4588,7 +4738,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/1.jpg"
+    "imagem": "/images/categories/cafeteria/item-01.jpg",
+    "image": "/images/categories/cafeteria/item-01.jpg"
   },
   {
     "id": "produto-152",
@@ -4621,7 +4772,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/2.jpg"
+    "imagem": "/images/categories/cafeteria/item-02.jpg",
+    "image": "/images/categories/cafeteria/item-02.jpg"
   },
   {
     "id": "produto-153",
@@ -4654,7 +4806,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/cafeteria/3.jpg"
+    "imagem": "/images/categories/cafeteria/item-03.jpg",
+    "image": "/images/categories/cafeteria/item-03.jpg"
   },
   {
     "id": "produto-154",
@@ -4682,7 +4835,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/1.jpg"
+    "imagem": "/images/categories/cafeteria/item-04.jpg",
+    "image": "/images/categories/cafeteria/item-04.jpg"
   },
   {
     "id": "produto-155",
@@ -4715,7 +4869,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/2.jpg"
+    "imagem": "/images/categories/cafeteria/item-05.jpg",
+    "image": "/images/categories/cafeteria/item-05.jpg"
   },
   {
     "id": "produto-156",
@@ -4748,7 +4903,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/3.jpg"
+    "imagem": "/images/categories/cafeteria/item-06.jpg",
+    "image": "/images/categories/cafeteria/item-06.jpg"
   },
   {
     "id": "produto-157",
@@ -4771,7 +4927,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/1.jpg"
+    "imagem": "/images/categories/cafeteria/item-07.jpg",
+    "image": "/images/categories/cafeteria/item-07.jpg"
   },
   {
     "id": "produto-158",
@@ -4788,7 +4945,8 @@
     "adicionais": [],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/2.jpg"
+    "imagem": "/images/categories/cafeteria/item-08.jpg",
+    "image": "/images/categories/cafeteria/item-08.jpg"
   },
   {
     "id": "produto-159",
@@ -4821,7 +4979,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/3.jpg"
+    "imagem": "/images/categories/cafeteria/item-09.jpg",
+    "image": "/images/categories/cafeteria/item-09.jpg"
   },
   {
     "id": "produto-160",
@@ -4849,7 +5008,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/1.jpg"
+    "imagem": "/images/categories/cafeteria/item-10.jpg",
+    "image": "/images/categories/cafeteria/item-10.jpg"
   },
   {
     "id": "produto-161",
@@ -4877,7 +5037,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/2.jpg"
+    "imagem": "/images/categories/cafeteria/item-11.jpg",
+    "image": "/images/categories/cafeteria/item-11.jpg"
   },
   {
     "id": "produto-162",
@@ -4900,7 +5061,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/cafeteria/3.jpg"
+    "imagem": "/images/categories/cafeteria/item-12.jpg",
+    "image": "/images/categories/cafeteria/item-12.jpg"
   },
   {
     "id": "produto-163",
@@ -4933,7 +5095,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/1.jpg"
+    "imagem": "/images/categories/sorveteria/item-01.jpg",
+    "image": "/images/categories/sorveteria/item-01.jpg"
   },
   {
     "id": "produto-164",
@@ -4966,7 +5129,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/2.jpg"
+    "imagem": "/images/categories/sorveteria/item-02.jpg",
+    "image": "/images/categories/sorveteria/item-02.jpg"
   },
   {
     "id": "produto-165",
@@ -4999,7 +5163,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/3.jpg"
+    "imagem": "/images/categories/sorveteria/item-03.jpg",
+    "image": "/images/categories/sorveteria/item-03.jpg"
   },
   {
     "id": "produto-166",
@@ -5022,7 +5187,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/1.jpg"
+    "imagem": "/images/categories/sorveteria/item-04.jpg",
+    "image": "/images/categories/sorveteria/item-04.jpg"
   },
   {
     "id": "produto-167",
@@ -5055,7 +5221,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/2.jpg"
+    "imagem": "/images/categories/sorveteria/item-05.jpg",
+    "image": "/images/categories/sorveteria/item-05.jpg"
   },
   {
     "id": "produto-168",
@@ -5088,7 +5255,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/3.jpg"
+    "imagem": "/images/categories/sorveteria/item-06.jpg",
+    "image": "/images/categories/sorveteria/item-06.jpg"
   },
   {
     "id": "produto-169",
@@ -5121,7 +5289,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/sorveteria/1.jpg"
+    "imagem": "/images/categories/sorveteria/item-07.jpg",
+    "image": "/images/categories/sorveteria/item-07.jpg"
   },
   {
     "id": "produto-170",
@@ -5149,7 +5318,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/2.jpg"
+    "imagem": "/images/categories/sorveteria/item-08.jpg",
+    "image": "/images/categories/sorveteria/item-08.jpg"
   },
   {
     "id": "produto-171",
@@ -5182,7 +5352,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/3.jpg"
+    "imagem": "/images/categories/sorveteria/item-09.jpg",
+    "image": "/images/categories/sorveteria/item-09.jpg"
   },
   {
     "id": "produto-172",
@@ -5215,7 +5386,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/1.jpg"
+    "imagem": "/images/categories/sorveteria/item-10.jpg",
+    "image": "/images/categories/sorveteria/item-10.jpg"
   },
   {
     "id": "produto-173",
@@ -5248,7 +5420,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/2.jpg"
+    "imagem": "/images/categories/sorveteria/item-11.jpg",
+    "image": "/images/categories/sorveteria/item-11.jpg"
   },
   {
     "id": "produto-174",
@@ -5281,7 +5454,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/sorveteria/3.jpg"
+    "imagem": "/images/categories/sorveteria/item-12.jpg",
+    "image": "/images/categories/sorveteria/item-12.jpg"
   },
   {
     "id": "produto-175",
@@ -5314,7 +5488,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/1.jpg"
+    "imagem": "/images/categories/acai/item-01.jpg",
+    "image": "/images/categories/acai/item-01.jpg"
   },
   {
     "id": "produto-176",
@@ -5347,7 +5522,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/2.jpg"
+    "imagem": "/images/categories/acai/item-02.jpg",
+    "image": "/images/categories/acai/item-02.jpg"
   },
   {
     "id": "produto-177",
@@ -5380,7 +5556,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/3.jpg"
+    "imagem": "/images/categories/acai/item-03.jpg",
+    "image": "/images/categories/acai/item-03.jpg"
   },
   {
     "id": "produto-178",
@@ -5413,7 +5590,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/1.jpg"
+    "imagem": "/images/categories/acai/item-04.jpg",
+    "image": "/images/categories/acai/item-04.jpg"
   },
   {
     "id": "produto-179",
@@ -5436,7 +5614,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/2.jpg"
+    "imagem": "/images/categories/acai/item-05.jpg",
+    "image": "/images/categories/acai/item-05.jpg"
   },
   {
     "id": "produto-180",
@@ -5469,7 +5648,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/3.jpg"
+    "imagem": "/images/categories/acai/item-06.jpg",
+    "image": "/images/categories/acai/item-06.jpg"
   },
   {
     "id": "produto-181",
@@ -5502,7 +5682,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/1.jpg"
+    "imagem": "/images/categories/acai/item-07.jpg",
+    "image": "/images/categories/acai/item-07.jpg"
   },
   {
     "id": "produto-182",
@@ -5530,7 +5711,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/2.jpg"
+    "imagem": "/images/categories/acai/item-08.jpg",
+    "image": "/images/categories/acai/item-08.jpg"
   },
   {
     "id": "produto-183",
@@ -5563,7 +5745,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/3.jpg"
+    "imagem": "/images/categories/acai/item-09.jpg",
+    "image": "/images/categories/acai/item-09.jpg"
   },
   {
     "id": "produto-184",
@@ -5586,7 +5769,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/1.jpg"
+    "imagem": "/images/categories/acai/item-10.jpg",
+    "image": "/images/categories/acai/item-10.jpg"
   },
   {
     "id": "produto-185",
@@ -5614,7 +5798,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/2.jpg"
+    "imagem": "/images/categories/acai/item-11.jpg",
+    "image": "/images/categories/acai/item-11.jpg"
   },
   {
     "id": "produto-186",
@@ -5647,7 +5832,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/acai/3.jpg"
+    "imagem": "/images/categories/acai/item-12.jpg",
+    "image": "/images/categories/acai/item-12.jpg"
   },
   {
     "id": "produto-187",
@@ -5664,7 +5850,8 @@
     "adicionais": [],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/1.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-188",
@@ -5697,7 +5884,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/2.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-189",
@@ -5725,7 +5913,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/3.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-190",
@@ -5758,7 +5947,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/1.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-191",
@@ -5791,7 +5981,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/marmita/2.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-192",
@@ -5824,7 +6015,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/3.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-193",
@@ -5857,7 +6049,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/1.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-194",
@@ -5890,7 +6083,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/2.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-195",
@@ -5918,7 +6112,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/3.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-196",
@@ -5951,7 +6146,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/1.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-197",
@@ -5974,7 +6170,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/marmita/2.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-198",
@@ -6007,7 +6204,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/marmita/3.jpg"
+    "imagem": "/images/categories/marmita/undefined",
+    "image": "/images/categories/marmita/undefined"
   },
   {
     "id": "produto-199",
@@ -6040,7 +6238,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/1.jpg"
+    "imagem": "/images/categories/lanches/item-01.jpg",
+    "image": "/images/categories/lanches/item-01.jpg"
   },
   {
     "id": "produto-200",
@@ -6073,7 +6272,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/2.jpg"
+    "imagem": "/images/categories/lanches/item-02.jpg",
+    "image": "/images/categories/lanches/item-02.jpg"
   },
   {
     "id": "produto-201",
@@ -6101,7 +6301,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/3.jpg"
+    "imagem": "/images/categories/lanches/item-03.jpg",
+    "image": "/images/categories/lanches/item-03.jpg"
   },
   {
     "id": "produto-202",
@@ -6129,7 +6330,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/1.jpg"
+    "imagem": "/images/categories/lanches/item-04.jpg",
+    "image": "/images/categories/lanches/item-04.jpg"
   },
   {
     "id": "produto-203",
@@ -6162,7 +6364,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/2.jpg"
+    "imagem": "/images/categories/lanches/item-05.jpg",
+    "image": "/images/categories/lanches/item-05.jpg"
   },
   {
     "id": "produto-204",
@@ -6190,7 +6393,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/3.jpg"
+    "imagem": "/images/categories/lanches/item-06.jpg",
+    "image": "/images/categories/lanches/item-06.jpg"
   },
   {
     "id": "produto-205",
@@ -6218,7 +6422,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/1.jpg"
+    "imagem": "/images/categories/lanches/item-07.jpg",
+    "image": "/images/categories/lanches/item-07.jpg"
   },
   {
     "id": "produto-206",
@@ -6251,7 +6456,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/2.jpg"
+    "imagem": "/images/categories/lanches/item-08.jpg",
+    "image": "/images/categories/lanches/item-08.jpg"
   },
   {
     "id": "produto-207",
@@ -6274,7 +6480,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/lanches/3.jpg"
+    "imagem": "/images/categories/lanches/item-09.jpg",
+    "image": "/images/categories/lanches/item-09.jpg"
   },
   {
     "id": "produto-208",
@@ -6307,7 +6514,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/1.jpg"
+    "imagem": "/images/categories/lanches/item-10.jpg",
+    "image": "/images/categories/lanches/item-10.jpg"
   },
   {
     "id": "produto-209",
@@ -6340,7 +6548,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/2.jpg"
+    "imagem": "/images/categories/lanches/item-11.jpg",
+    "image": "/images/categories/lanches/item-11.jpg"
   },
   {
     "id": "produto-210",
@@ -6373,7 +6582,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/lanches/3.jpg"
+    "imagem": "/images/categories/lanches/item-12.jpg",
+    "image": "/images/categories/lanches/item-12.jpg"
   },
   {
     "id": "produto-211",
@@ -6396,7 +6606,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/1.jpg"
+    "imagem": "/images/categories/vegano/item-01.jpg",
+    "image": "/images/categories/vegano/item-01.jpg"
   },
   {
     "id": "produto-212",
@@ -6429,7 +6640,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/2.jpg"
+    "imagem": "/images/categories/vegano/item-02.jpg",
+    "image": "/images/categories/vegano/item-02.jpg"
   },
   {
     "id": "produto-213",
@@ -6457,7 +6669,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/3.jpg"
+    "imagem": "/images/categories/vegano/item-03.jpg",
+    "image": "/images/categories/vegano/item-03.jpg"
   },
   {
     "id": "produto-214",
@@ -6490,7 +6703,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/1.jpg"
+    "imagem": "/images/categories/vegano/item-04.jpg",
+    "image": "/images/categories/vegano/item-04.jpg"
   },
   {
     "id": "produto-215",
@@ -6523,7 +6737,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/2.jpg"
+    "imagem": "/images/categories/vegano/item-05.jpg",
+    "image": "/images/categories/vegano/item-05.jpg"
   },
   {
     "id": "produto-216",
@@ -6551,7 +6766,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegano/3.jpg"
+    "imagem": "/images/categories/vegano/item-06.jpg",
+    "image": "/images/categories/vegano/item-06.jpg"
   },
   {
     "id": "produto-217",
@@ -6584,7 +6800,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/1.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-218",
@@ -6617,7 +6834,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/2.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-219",
@@ -6645,7 +6863,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/3.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-220",
@@ -6673,7 +6892,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/1.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-221",
@@ -6701,7 +6921,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/2.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-222",
@@ -6729,7 +6950,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/vegetariano/3.jpg"
+    "imagem": "/images/categories/vegetariano/undefined",
+    "image": "/images/categories/vegetariano/undefined"
   },
   {
     "id": "produto-223",
@@ -6762,7 +6984,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/1.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-01.jpg",
+    "image": "/images/categories/frutos-do-mar/item-01.jpg"
   },
   {
     "id": "produto-224",
@@ -6790,7 +7013,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/2.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-02.jpg",
+    "image": "/images/categories/frutos-do-mar/item-02.jpg"
   },
   {
     "id": "produto-225",
@@ -6823,7 +7047,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/3.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-03.jpg",
+    "image": "/images/categories/frutos-do-mar/item-03.jpg"
   },
   {
     "id": "produto-226",
@@ -6856,7 +7081,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/frutos-do-mar/1.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-04.jpg",
+    "image": "/images/categories/frutos-do-mar/item-04.jpg"
   },
   {
     "id": "produto-227",
@@ -6889,7 +7115,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/2.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-05.jpg",
+    "image": "/images/categories/frutos-do-mar/item-05.jpg"
   },
   {
     "id": "produto-228",
@@ -6922,7 +7149,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/3.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-06.jpg",
+    "image": "/images/categories/frutos-do-mar/item-06.jpg"
   },
   {
     "id": "produto-229",
@@ -6955,7 +7183,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/1.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-07.jpg",
+    "image": "/images/categories/frutos-do-mar/item-07.jpg"
   },
   {
     "id": "produto-230",
@@ -6988,7 +7217,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/2.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-08.jpg",
+    "image": "/images/categories/frutos-do-mar/item-08.jpg"
   },
   {
     "id": "produto-231",
@@ -7016,7 +7246,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/3.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-09.jpg",
+    "image": "/images/categories/frutos-do-mar/item-09.jpg"
   },
   {
     "id": "produto-232",
@@ -7049,7 +7280,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/1.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-10.jpg",
+    "image": "/images/categories/frutos-do-mar/item-10.jpg"
   },
   {
     "id": "produto-233",
@@ -7082,7 +7314,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": false,
-    "imagem": "/images/categories/frutos-do-mar/2.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-11.jpg",
+    "image": "/images/categories/frutos-do-mar/item-11.jpg"
   },
   {
     "id": "produto-234",
@@ -7110,7 +7343,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/frutos-do-mar/3.jpg"
+    "imagem": "/images/categories/frutos-do-mar/item-12.jpg",
+    "image": "/images/categories/frutos-do-mar/item-12.jpg"
   },
   {
     "id": "produto-235",
@@ -7143,7 +7377,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/1.jpg"
+    "imagem": "/images/categories/italiana/item-01.jpg",
+    "image": "/images/categories/italiana/item-01.jpg"
   },
   {
     "id": "produto-236",
@@ -7176,7 +7411,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/2.jpg"
+    "imagem": "/images/categories/italiana/item-02.jpg",
+    "image": "/images/categories/italiana/item-02.jpg"
   },
   {
     "id": "produto-237",
@@ -7199,7 +7435,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/3.jpg"
+    "imagem": "/images/categories/italiana/item-03.jpg",
+    "image": "/images/categories/italiana/item-03.jpg"
   },
   {
     "id": "produto-238",
@@ -7216,7 +7453,8 @@
     "adicionais": [],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/1.jpg"
+    "imagem": "/images/categories/italiana/item-04.jpg",
+    "image": "/images/categories/italiana/item-04.jpg"
   },
   {
     "id": "produto-239",
@@ -7249,7 +7487,8 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/2.jpg"
+    "imagem": "/images/categories/italiana/item-05.jpg",
+    "image": "/images/categories/italiana/item-05.jpg"
   },
   {
     "id": "produto-240",
@@ -7282,6 +7521,7 @@
     ],
     "observacoes": "Pode ser personalizado conforme preferência do cliente.",
     "disponivel": true,
-    "imagem": "/images/categories/italiana/3.jpg"
+    "imagem": "/images/categories/italiana/item-06.jpg",
+    "image": "/images/categories/italiana/item-06.jpg"
   }
 ]

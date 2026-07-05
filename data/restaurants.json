@@ -36,9 +36,9 @@
       "entrega rápida",
       "econômico"
     ],
-    "logo": "/images/categories/pizza/1.jpg",
-    "banner": "/images/categories/pizza/2.jpg",
-    "capa": "/images/categories/pizza/3.jpg",
+    "logo": "/images/categories/pizza/item-01.jpg",
+    "banner": "/images/categories/pizza/item-01.jpg",
+    "capa": "/images/categories/pizza/item-01.jpg",
     "createdAt": "2024-01-01T00:00:00.000Z"
   },
   {
@@ -78,9 +78,9 @@
       "melhor avaliado",
       "família"
     ],
-    "logo": "/images/categories/pizza/1.jpg",
-    "banner": "/images/categories/pizza/2.jpg",
-    "capa": "/images/categories/pizza/3.jpg",
+    "logo": "/images/categories/pizza/item-01.jpg",
+    "banner": "/images/categories/pizza/item-02.jpg",
+    "capa": "/images/categories/pizza/item-02.jpg",
     "createdAt": "2024-02-02T00:00:00.000Z"
   },
   {
@@ -120,9 +120,9 @@
       "novo",
       "romântico"
     ],
-    "logo": "/images/categories/pizza/1.jpg",
-    "banner": "/images/categories/pizza/2.jpg",
-    "capa": "/images/categories/pizza/3.jpg",
+    "logo": "/images/categories/pizza/item-01.jpg",
+    "banner": "/images/categories/pizza/item-03.jpg",
+    "capa": "/images/categories/pizza/item-03.jpg",
     "createdAt": "2024-03-03T00:00:00.000Z"
   },
   {
@@ -162,9 +162,9 @@
       "econômico",
       "kids"
     ],
-    "logo": "/images/categories/hamburguer/1.jpg",
-    "banner": "/images/categories/hamburguer/2.jpg",
-    "capa": "/images/categories/hamburguer/3.jpg",
+    "logo": "/images/categories/hamburguer/item-01.jpg",
+    "banner": "/images/categories/hamburguer/item-01.jpg",
+    "capa": "/images/categories/hamburguer/item-01.jpg",
     "createdAt": "2024-04-04T00:00:00.000Z"
   },
   {
@@ -204,9 +204,9 @@
       "família",
       "24 horas"
     ],
-    "logo": "/images/categories/hamburguer/1.jpg",
-    "banner": "/images/categories/hamburguer/2.jpg",
-    "capa": "/images/categories/hamburguer/3.jpg",
+    "logo": "/images/categories/hamburguer/item-01.jpg",
+    "banner": "/images/categories/hamburguer/item-02.jpg",
+    "capa": "/images/categories/hamburguer/item-02.jpg",
     "createdAt": "2024-05-05T00:00:00.000Z"
   },
   {
@@ -246,9 +246,9 @@
       "romântico",
       "sem glúten"
     ],
-    "logo": "/images/categories/hamburguer/1.jpg",
-    "banner": "/images/categories/hamburguer/2.jpg",
-    "capa": "/images/categories/hamburguer/3.jpg",
+    "logo": "/images/categories/hamburguer/item-01.jpg",
+    "banner": "/images/categories/hamburguer/item-03.jpg",
+    "capa": "/images/categories/hamburguer/item-03.jpg",
     "createdAt": "2024-06-06T00:00:00.000Z"
   },
   {
@@ -288,9 +288,9 @@
       "kids",
       "porções grandes"
     ],
-    "logo": "/images/categories/sushi/1.jpg",
-    "banner": "/images/categories/sushi/2.jpg",
-    "capa": "/images/categories/sushi/3.jpg",
+    "logo": "/images/categories/sushi/item-01.jpg",
+    "banner": "/images/categories/sushi/item-01.jpg",
+    "capa": "/images/categories/sushi/item-01.jpg",
     "createdAt": "2024-07-07T00:00:00.000Z"
   },
   {
@@ -330,9 +330,9 @@
       "24 horas",
       "entrega rápida"
     ],
-    "logo": "/images/categories/sushi/1.jpg",
-    "banner": "/images/categories/sushi/2.jpg",
-    "capa": "/images/categories/sushi/3.jpg",
+    "logo": "/images/categories/sushi/item-01.jpg",
+    "banner": "/images/categories/sushi/item-02.jpg",
+    "capa": "/images/categories/sushi/item-02.jpg",
     "createdAt": "2024-08-08T00:00:00.000Z"
   },
   {
@@ -372,9 +372,9 @@
       "sem glúten",
       "melhor avaliado"
     ],
-    "logo": "/images/categories/sushi/1.jpg",
-    "banner": "/images/categories/sushi/2.jpg",
-    "capa": "/images/categories/sushi/3.jpg",
+    "logo": "/images/categories/sushi/item-01.jpg",
+    "banner": "/images/categories/sushi/item-03.jpg",
+    "capa": "/images/categories/sushi/item-03.jpg",
     "createdAt": "2024-09-09T00:00:00.000Z"
   },
   {
@@ -414,9 +414,9 @@
       "porções grandes",
       "novo"
     ],
-    "logo": "/images/categories/padaria/1.jpg",
-    "banner": "/images/categories/padaria/2.jpg",
-    "capa": "/images/categories/padaria/3.jpg",
+    "logo": "/images/categories/padaria/item-01.jpg",
+    "banner": "/images/categories/padaria/item-01.jpg",
+    "capa": "/images/categories/padaria/item-01.jpg",
     "createdAt": "2024-10-10T00:00:00.000Z"
   },
   {
@@ -456,9 +456,9 @@
       "entrega rápida",
       "econômico"
     ],
-    "logo": "/images/categories/padaria/1.jpg",
-    "banner": "/images/categories/padaria/2.jpg",
-    "capa": "/images/categories/padaria/3.jpg",
+    "logo": "/images/categories/padaria/item-01.jpg",
+    "banner": "/images/categories/padaria/item-02.jpg",
+    "capa": "/images/categories/padaria/item-02.jpg",
     "createdAt": "2024-11-11T00:00:00.000Z"
   },
   {
@@ -498,9 +498,9 @@
       "melhor avaliado",
       "família"
     ],
-    "logo": "/images/categories/churrasco/1.jpg",
-    "banner": "/images/categories/churrasco/2.jpg",
-    "capa": "/images/categories/churrasco/3.jpg",
+    "logo": "/images/categories/churrasco/item-01.jpg",
+    "banner": "/images/categories/churrasco/item-01.jpg",
+    "capa": "/images/categories/churrasco/item-01.jpg",
     "createdAt": "2024-12-12T00:00:00.000Z"
   },
   {
@@ -540,9 +540,9 @@
       "novo",
       "romântico"
     ],
-    "logo": "/images/categories/churrasco/1.jpg",
-    "banner": "/images/categories/churrasco/2.jpg",
-    "capa": "/images/categories/churrasco/3.jpg",
+    "logo": "/images/categories/churrasco/item-01.jpg",
+    "banner": "/images/categories/churrasco/item-02.jpg",
+    "capa": "/images/categories/churrasco/item-02.jpg",
     "createdAt": "2024-01-13T00:00:00.000Z"
   },
   {
@@ -582,9 +582,9 @@
       "econômico",
       "kids"
     ],
-    "logo": "/images/categories/churrasco/1.jpg",
-    "banner": "/images/categories/churrasco/2.jpg",
-    "capa": "/images/categories/churrasco/3.jpg",
+    "logo": "/images/categories/churrasco/item-01.jpg",
+    "banner": "/images/categories/churrasco/item-03.jpg",
+    "capa": "/images/categories/churrasco/item-03.jpg",
     "createdAt": "2024-02-14T00:00:00.000Z"
   },
   {
@@ -625,8 +625,8 @@
       "24 horas"
     ],
     "logo": "/images/categories/brasileira/1.jpg",
-    "banner": "/images/categories/brasileira/2.jpg",
-    "capa": "/images/categories/brasileira/3.jpg",
+    "banner": "/images/categories/brasileira/undefined",
+    "capa": "/images/categories/brasileira/undefined",
     "createdAt": "2024-03-15T00:00:00.000Z"
   },
   {
@@ -667,8 +667,8 @@
       "sem glúten"
     ],
     "logo": "/images/categories/brasileira/1.jpg",
-    "banner": "/images/categories/brasileira/2.jpg",
-    "capa": "/images/categories/brasileira/3.jpg",
+    "banner": "/images/categories/brasileira/undefined",
+    "capa": "/images/categories/brasileira/undefined",
     "createdAt": "2024-04-16T00:00:00.000Z"
   },
   {
@@ -708,9 +708,9 @@
       "kids",
       "porções grandes"
     ],
-    "logo": "/images/categories/mineira/1.jpg",
-    "banner": "/images/categories/mineira/2.jpg",
-    "capa": "/images/categories/mineira/3.jpg",
+    "logo": "/images/categories/mineira/item-01.jpg",
+    "banner": "/images/categories/mineira/item-01.jpg",
+    "capa": "/images/categories/mineira/item-01.jpg",
     "createdAt": "2024-05-17T00:00:00.000Z"
   },
   {
@@ -750,9 +750,9 @@
       "24 horas",
       "entrega rápida"
     ],
-    "logo": "/images/categories/mineira/1.jpg",
-    "banner": "/images/categories/mineira/2.jpg",
-    "capa": "/images/categories/mineira/3.jpg",
+    "logo": "/images/categories/mineira/item-01.jpg",
+    "banner": "/images/categories/mineira/item-02.jpg",
+    "capa": "/images/categories/mineira/item-02.jpg",
     "createdAt": "2024-06-18T00:00:00.000Z"
   },
   {
@@ -792,9 +792,9 @@
       "sem glúten",
       "melhor avaliado"
     ],
-    "logo": "/images/categories/mineira/1.jpg",
-    "banner": "/images/categories/mineira/2.jpg",
-    "capa": "/images/categories/mineira/3.jpg",
+    "logo": "/images/categories/mineira/item-01.jpg",
+    "banner": "/images/categories/mineira/item-03.jpg",
+    "capa": "/images/categories/mineira/item-03.jpg",
     "createdAt": "2024-07-19T00:00:00.000Z"
   },
   {
@@ -834,9 +834,9 @@
       "porções grandes",
       "novo"
     ],
-    "logo": "/images/categories/mexicana/1.jpg",
-    "banner": "/images/categories/mexicana/2.jpg",
-    "capa": "/images/categories/mexicana/3.jpg",
+    "logo": "/images/categories/mexicana/item-01.jpg",
+    "banner": "/images/categories/mexicana/item-01.jpg",
+    "capa": "/images/categories/mexicana/item-01.jpg",
     "createdAt": "2024-08-20T00:00:00.000Z"
   },
   {
@@ -876,9 +876,9 @@
       "entrega rápida",
       "econômico"
     ],
-    "logo": "/images/categories/mexicana/1.jpg",
-    "banner": "/images/categories/mexicana/2.jpg",
-    "capa": "/images/categories/mexicana/3.jpg",
+    "logo": "/images/categories/mexicana/item-01.jpg",
+    "banner": "/images/categories/mexicana/item-02.jpg",
+    "capa": "/images/categories/mexicana/item-02.jpg",
     "createdAt": "2024-09-21T00:00:00.000Z"
   },
   {
@@ -918,9 +918,9 @@
       "melhor avaliado",
       "família"
     ],
-    "logo": "/images/categories/arabe/1.jpg",
-    "banner": "/images/categories/arabe/2.jpg",
-    "capa": "/images/categories/arabe/3.jpg",
+    "logo": "/images/categories/arabe/item-01.jpg",
+    "banner": "/images/categories/arabe/item-01.jpg",
+    "capa": "/images/categories/arabe/item-01.jpg",
     "createdAt": "2024-10-22T00:00:00.000Z"
   },
   {
@@ -960,9 +960,9 @@
       "novo",
       "romântico"
     ],
-    "logo": "/images/categories/arabe/1.jpg",
-    "banner": "/images/categories/arabe/2.jpg",
-    "capa": "/images/categories/arabe/3.jpg",
+    "logo": "/images/categories/arabe/item-01.jpg",
+    "banner": "/images/categories/arabe/item-02.jpg",
+    "capa": "/images/categories/arabe/item-02.jpg",
     "createdAt": "2024-11-23T00:00:00.000Z"
   },
   {
@@ -1003,8 +1003,8 @@
       "kids"
     ],
     "logo": "/images/categories/oriental/1.jpg",
-    "banner": "/images/categories/oriental/2.jpg",
-    "capa": "/images/categories/oriental/3.jpg",
+    "banner": "/images/categories/oriental/undefined",
+    "capa": "/images/categories/oriental/undefined",
     "createdAt": "2024-12-24T00:00:00.000Z"
   },
   {
@@ -1045,8 +1045,8 @@
       "24 horas"
     ],
     "logo": "/images/categories/oriental/1.jpg",
-    "banner": "/images/categories/oriental/2.jpg",
-    "capa": "/images/categories/oriental/3.jpg",
+    "banner": "/images/categories/oriental/undefined",
+    "capa": "/images/categories/oriental/undefined",
     "createdAt": "2024-01-25T00:00:00.000Z"
   },
   {
@@ -1086,9 +1086,9 @@
       "romântico",
       "sem glúten"
     ],
-    "logo": "/images/categories/cafeteria/1.jpg",
-    "banner": "/images/categories/cafeteria/2.jpg",
-    "capa": "/images/categories/cafeteria/3.jpg",
+    "logo": "/images/categories/cafeteria/item-01.jpg",
+    "banner": "/images/categories/cafeteria/item-01.jpg",
+    "capa": "/images/categories/cafeteria/item-01.jpg",
     "createdAt": "2024-02-26T00:00:00.000Z"
   },
   {
@@ -1128,9 +1128,9 @@
       "kids",
       "porções grandes"
     ],
-    "logo": "/images/categories/cafeteria/1.jpg",
-    "banner": "/images/categories/cafeteria/2.jpg",
-    "capa": "/images/categories/cafeteria/3.jpg",
+    "logo": "/images/categories/cafeteria/item-01.jpg",
+    "banner": "/images/categories/cafeteria/item-02.jpg",
+    "capa": "/images/categories/cafeteria/item-02.jpg",
     "createdAt": "2024-03-27T00:00:00.000Z"
   },
   {
@@ -1170,9 +1170,9 @@
       "24 horas",
       "entrega rápida"
     ],
-    "logo": "/images/categories/sorveteria/1.jpg",
-    "banner": "/images/categories/sorveteria/2.jpg",
-    "capa": "/images/categories/sorveteria/3.jpg",
+    "logo": "/images/categories/sorveteria/item-01.jpg",
+    "banner": "/images/categories/sorveteria/item-01.jpg",
+    "capa": "/images/categories/sorveteria/item-01.jpg",
     "createdAt": "2024-04-01T00:00:00.000Z"
   },
   {
@@ -1212,9 +1212,9 @@
       "sem glúten",
       "melhor avaliado"
     ],
-    "logo": "/images/categories/sorveteria/1.jpg",
-    "banner": "/images/categories/sorveteria/2.jpg",
-    "capa": "/images/categories/sorveteria/3.jpg",
+    "logo": "/images/categories/sorveteria/item-01.jpg",
+    "banner": "/images/categories/sorveteria/item-02.jpg",
+    "capa": "/images/categories/sorveteria/item-02.jpg",
     "createdAt": "2024-05-02T00:00:00.000Z"
   },
   {
@@ -1254,9 +1254,9 @@
       "porções grandes",
       "novo"
     ],
-    "logo": "/images/categories/acai/1.jpg",
-    "banner": "/images/categories/acai/2.jpg",
-    "capa": "/images/categories/acai/3.jpg",
+    "logo": "/images/categories/acai/item-01.jpg",
+    "banner": "/images/categories/acai/item-01.jpg",
+    "capa": "/images/categories/acai/item-01.jpg",
     "createdAt": "2024-06-03T00:00:00.000Z"
   },
   {
@@ -1296,9 +1296,9 @@
       "entrega rápida",
       "econômico"
     ],
-    "logo": "/images/categories/acai/1.jpg",
-    "banner": "/images/categories/acai/2.jpg",
-    "capa": "/images/categories/acai/3.jpg",
+    "logo": "/images/categories/acai/item-01.jpg",
+    "banner": "/images/categories/acai/item-02.jpg",
+    "capa": "/images/categories/acai/item-02.jpg",
     "createdAt": "2024-07-04T00:00:00.000Z"
   },
   {
@@ -1339,8 +1339,8 @@
       "família"
     ],
     "logo": "/images/categories/marmita/1.jpg",
-    "banner": "/images/categories/marmita/2.jpg",
-    "capa": "/images/categories/marmita/3.jpg",
+    "banner": "/images/categories/marmita/undefined",
+    "capa": "/images/categories/marmita/undefined",
     "createdAt": "2024-08-05T00:00:00.000Z"
   },
   {
@@ -1381,8 +1381,8 @@
       "romântico"
     ],
     "logo": "/images/categories/marmita/1.jpg",
-    "banner": "/images/categories/marmita/2.jpg",
-    "capa": "/images/categories/marmita/3.jpg",
+    "banner": "/images/categories/marmita/undefined",
+    "capa": "/images/categories/marmita/undefined",
     "createdAt": "2024-09-06T00:00:00.000Z"
   },
   {
@@ -1422,9 +1422,9 @@
       "econômico",
       "kids"
     ],
-    "logo": "/images/categories/lanches/1.jpg",
-    "banner": "/images/categories/lanches/2.jpg",
-    "capa": "/images/categories/lanches/3.jpg",
+    "logo": "/images/categories/lanches/item-01.jpg",
+    "banner": "/images/categories/lanches/item-01.jpg",
+    "capa": "/images/categories/lanches/item-01.jpg",
     "createdAt": "2024-10-07T00:00:00.000Z"
   },
   {
@@ -1464,9 +1464,9 @@
       "família",
       "24 horas"
     ],
-    "logo": "/images/categories/lanches/1.jpg",
-    "banner": "/images/categories/lanches/2.jpg",
-    "capa": "/images/categories/lanches/3.jpg",
+    "logo": "/images/categories/lanches/item-01.jpg",
+    "banner": "/images/categories/lanches/item-02.jpg",
+    "capa": "/images/categories/lanches/item-02.jpg",
     "createdAt": "2024-11-08T00:00:00.000Z"
   },
   {
@@ -1506,9 +1506,9 @@
       "romântico",
       "sem glúten"
     ],
-    "logo": "/images/categories/vegano/1.jpg",
-    "banner": "/images/categories/vegano/2.jpg",
-    "capa": "/images/categories/vegano/3.jpg",
+    "logo": "/images/categories/vegano/item-01.jpg",
+    "banner": "/images/categories/vegano/item-01.jpg",
+    "capa": "/images/categories/vegano/item-01.jpg",
     "createdAt": "2024-12-09T00:00:00.000Z"
   },
   {
@@ -1549,8 +1549,8 @@
       "porções grandes"
     ],
     "logo": "/images/categories/vegetariano/1.jpg",
-    "banner": "/images/categories/vegetariano/2.jpg",
-    "capa": "/images/categories/vegetariano/3.jpg",
+    "banner": "/images/categories/vegetariano/undefined",
+    "capa": "/images/categories/vegetariano/undefined",
     "createdAt": "2024-01-10T00:00:00.000Z"
   },
   {
@@ -1590,9 +1590,9 @@
       "24 horas",
       "entrega rápida"
     ],
-    "logo": "/images/categories/frutos-do-mar/1.jpg",
-    "banner": "/images/categories/frutos-do-mar/2.jpg",
-    "capa": "/images/categories/frutos-do-mar/3.jpg",
+    "logo": "/images/categories/frutos-do-mar/item-01.jpg",
+    "banner": "/images/categories/frutos-do-mar/item-01.jpg",
+    "capa": "/images/categories/frutos-do-mar/item-01.jpg",
     "createdAt": "2024-02-11T00:00:00.000Z"
   },
   {
@@ -1632,9 +1632,9 @@
       "sem glúten",
       "melhor avaliado"
     ],
-    "logo": "/images/categories/frutos-do-mar/1.jpg",
-    "banner": "/images/categories/frutos-do-mar/2.jpg",
-    "capa": "/images/categories/frutos-do-mar/3.jpg",
+    "logo": "/images/categories/frutos-do-mar/item-01.jpg",
+    "banner": "/images/categories/frutos-do-mar/item-02.jpg",
+    "capa": "/images/categories/frutos-do-mar/item-02.jpg",
     "createdAt": "2024-03-12T00:00:00.000Z"
   },
   {
@@ -1674,9 +1674,9 @@
       "porções grandes",
       "novo"
     ],
-    "logo": "/images/categories/italiana/1.jpg",
-    "banner": "/images/categories/italiana/2.jpg",
-    "capa": "/images/categories/italiana/3.jpg",
+    "logo": "/images/categories/italiana/item-01.jpg",
+    "banner": "/images/categories/italiana/item-01.jpg",
+    "capa": "/images/categories/italiana/item-01.jpg",
     "createdAt": "2024-04-13T00:00:00.000Z"
   }
 ]
