@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, Star, Clock, DollarSign, Heart } from "lucide-react";
+import { MapPin, Star, Clock, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import type { Restaurant } from "@/lib/types";
-import { CATEGORY_LABELS, RESTAURANT_CATEGORIES } from "@/lib/types";
-import { useAuth } from "@/contexts/auth-context";
+import { CATEGORY_LABELS } from "@/lib/types";
 
 interface RestaurantCardProps {
   restaurant: Restaurant;
@@ -15,15 +13,7 @@ interface RestaurantCardProps {
 }
 
 export function RestaurantCard({ restaurant, onClick }: RestaurantCardProps) {
-  const { state: authState, toggleFavorite } = useAuth();
-  const isFavorite = authState.user?.favoriteRestaurantIds.includes(restaurant.id) || false;
-
-  const categoryLabel = CATEGORY_LABELS[restaurant.category];
-
-  const handleFavoriteClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    toggleFavorite(restaurant.id);
-  };
+  const categoryLabel = CATEGORY_LABELS[restaurant.categoriaSlug] || restaurant.categoriaSlug;
 
   return (
     <Card
@@ -31,29 +21,24 @@ export function RestaurantCard({ restaurant, onClick }: RestaurantCardProps) {
       onClick={onClick}
     >
       <div className="relative h-48 overflow-hidden bg-gray-100">
-        {restaurant.coverImage ? (
-          <Image
+        {restaurant.capa ? (
+          <img
+            src={restaurant.capa}
+            alt={restaurant.nome}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : restaurant.coverImage ? (
+          <img
             src={restaurant.coverImage}
-            alt={restaurant.name}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            alt={restaurant.nome}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-100">
             <span className="text-gray-400 text-4xl">🍽️</span>
           </div>
         )}
-        <div className="absolute top-3 right-3 flex gap-2">
-          <Button
-            variant="secondary"
-            size="icon"
-            className="h-8 w-8 bg-white/90 hover:bg-white"
-            onClick={handleFavoriteClick}
-          >
-            <Heart
-              className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : ""}`}
-            />
-          </Button>
+        <div className="absolute top-3 right-3">
           <Badge variant="secondary" className="bg-white/90 text-foreground">
             {categoryLabel}
           </Badge>
@@ -63,41 +48,43 @@ export function RestaurantCard({ restaurant, onClick }: RestaurantCardProps) {
       <CardContent className="p-4">
         <div className="space-y-2">
           <h3 className="font-serif font-bold text-lg text-card-foreground line-clamp-1">
-            {restaurant.name}
+            {restaurant.nome}
           </h3>
 
           <div className="flex items-start gap-1 text-sm text-muted-foreground">
             <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-            <span className="line-clamp-2">{restaurant.address}</span>
+            <span className="line-clamp-2">
+              {restaurant.endereco}
+            </span>
           </div>
 
           <div className="flex items-center justify-between text-sm">
-            {restaurant.rating !== undefined && (
-              <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                <span className="font-medium">{restaurant.rating.toFixed(1)}</span>
-                {restaurant.reviewCount !== undefined && (
-                  <span className="text-muted-foreground">
-                    ({restaurant.reviewCount})
-                  </span>
-                )}
-              </div>
-            )}
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="font-medium">
+                {restaurant.nota.toFixed(1)}
+              </span>
+              <span className="text-muted-foreground">
+                ({restaurant.avaliacoes})
+              </span>
+            </div>
 
             <div className="flex items-center gap-1 text-muted-foreground">
               <DollarSign className="h-4 w-4" />
-              <span>{restaurant.priceRange}</span>
+              <span>{restaurant.faixaDePreco}</span>
             </div>
           </div>
 
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-1 text-muted-foreground">
               <Clock className="h-4 w-4" />
-              <span>{restaurant.deliveryTime}</span>
+              <span>
+                {restaurant.tempoEntregaMin}-{restaurant.tempoEntregaMax} min
+              </span>
             </div>
 
             <Badge variant="outline" className="text-xs">
-              {restaurant.isOpenNow ? "Aberto" : "Fechado"}
+              {restaurant.aberto ? "Aberto" : "Fechado"}
             </Badge>
           </div>
         </div>

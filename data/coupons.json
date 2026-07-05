@@ -1,0 +1,35 @@
+[
+  {
+    "id": "cupom-01",
+    "codigo": "BEMVINDO10",
+    "descricao": "10% de desconto no primeiro pedido",
+    "tipoDesconto": "percentual",
+    "valorDesconto": 10,
+    "valorMinimoPedido": 30,
+    "restaurantId": null,
+    "validoAte": "2026-12-31",
+    "ativo": true
+  },
+  {
+    "id": "cupom-02",
+    "codigo": "FRETEGRATIS",
+    "descricao": "Frete grátis em pedidos acima de R$ 50",
+    "tipoDesconto": "fixo",
+    "valorDesconto": 8,
+    "valorMinimoPedido": 50,
+    "restaurantId": null,
+    "validoAte": "2026-12-31",
+    "ativo": true
+  },
+  {
+    "id": "cupom-03",
+    "codigo": "PIZZA15",
+    "descricao": "15% de desconto em pizzarias participantes",
+    "tipoDesconto": "percentual",
+    "valorDesconto": 15,
+    "valorMinimoPedido": 40,
+    "restaurantId": "restaurante-001",
+    "validoAte": "2026-09-30",
+    "ativo": true
+  }
+]

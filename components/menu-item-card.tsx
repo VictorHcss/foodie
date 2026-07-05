@@ -5,6 +5,7 @@ import { Plus } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import type { MenuItem } from "@/lib/types"
+import { formatCurrency } from "@/utils/format"
 
 interface MenuItemCardProps {
   item: MenuItem
@@ -12,15 +13,20 @@ interface MenuItemCardProps {
 }
 
 export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
+  const itemName = item.nome || item.name || "Item"
+  const itemDesc = item.descricao || item.description || ""
+  const itemPrice = item.precoPromocional || item.preco || item.price || 0
+  const itemImage = item.imagem || item.image || "/placeholder.svg"
+
   return (
     <Card className="group overflow-hidden transition-all duration-300 hover:shadow-md">
       <CardContent className="p-0">
         <div className="flex gap-4 p-4">
           <div className="flex-1 space-y-2">
-            <h4 className="font-serif font-semibold text-lg text-card-foreground">{item.name}</h4>
-            <p className="text-sm text-muted-foreground line-clamp-2">{item.description}</p>
+            <h4 className="font-serif font-semibold text-lg text-card-foreground">{itemName}</h4>
+            <p className="text-sm text-muted-foreground line-clamp-2">{itemDesc}</p>
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-lg text-primary">R$ {item.price.toFixed(2)}</span>
+              <span className="font-semibold text-lg text-primary">{formatCurrency(itemPrice)}</span>
               <Button
                 size="sm"
                 onClick={() => onAddToCart(item)}
@@ -33,18 +39,12 @@ export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
           </div>
 
           <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-gray-100">
-            {item.image ? (
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🍽️</span>
-              </div>
-            )}
+            <Image
+              src={itemImage}
+              alt={itemName}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-110"
+            />
           </div>
         </div>
       </CardContent>

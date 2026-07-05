@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Playfair_Display, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
 import { CartProvider } from "@/contexts/cart-context"
@@ -23,6 +23,21 @@ export const metadata: Metadata = {
   title: "Foodie - Delivery de Comida",
   description: "Encontre os melhores restaurantes da sua região",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#2dd4bf",
 }
 
 export default function RootLayout({

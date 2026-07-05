@@ -1,18 +1,18 @@
 import { NextRequest } from "next/server";
 import { apiSuccess } from "@/lib/api-response";
-import { buildRestaurantFiltersFromSearchParams, listRestaurants } from "@/services/restaurants.service";
+import { buildProductFiltersFromSearchParams, listProducts } from "@/services/products.service";
 import { paginate, parseNumberParam } from "@/utils/filters";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
-  const filters = buildRestaurantFiltersFromSearchParams(searchParams);
-  const restaurants = listRestaurants(filters);
+  const filters = buildProductFiltersFromSearchParams(searchParams);
+  const products = listProducts(filters);
 
   const page = parseNumberParam(searchParams.get("page"));
   const limit = parseNumberParam(searchParams.get("limit"));
 
-  const result = paginate(restaurants, { page, limit });
+  const result = paginate(products, { page, limit });
 
   return apiSuccess(result);
 }

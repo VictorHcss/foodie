@@ -10,9 +10,10 @@ import { Badge } from "@/components/ui/badge"
 import { useCart } from "@/contexts/cart-context"
 import { useAuth } from "@/contexts/auth-context"
 import { useToast } from "@/components/ui/use-toast"
-import { getRestaurantById } from "@/data/restaurants"
+import { getRestaurantById } from "@/services/restaurants.service"
 import { createOrder } from "@/data/orders"
 import { useEffect, useState } from "react"
+import { formatCurrency } from "@/utils/format"
 
 export function CartDrawer() {
   const { state, closeCart, updateQuantity, removeItem, clearCart, getSubtotal, getDeliveryFee, getDiscount, getTotal } =
@@ -64,16 +65,16 @@ export function CartDrawer() {
     const deliveryAddress = authState.user.address || "Endereço não cadastrado"
 
     createOrder(
-      authState.user.id,
-      restaurant.id,
-      restaurant.name,
-      state.items.map(item => ({ menuItem: item.menuItem, quantity: item.quantity })),
-      getSubtotal(),
-      getDeliveryFee(),
-      getDiscount(),
-      getTotal(),
-      deliveryAddress
-    )
+    authState.user.id,
+    restaurant.id,
+    restaurant.nome || restaurant.name || "Restaurante",
+    state.items.map(item => ({ menuItem: item.menuItem, quantity: item.quantity })),
+    getSubtotal(),
+    getDeliveryFee(),
+    getDiscount(),
+    getTotal(),
+    deliveryAddress
+  )
 
     toast({
       title: "Pedido realizado!",
@@ -128,19 +129,19 @@ export function CartDrawer() {
                   <div className="flex items-center gap-3">
                     <div className="relative h-10 w-10 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src={restaurant.coverImage || "/placeholder.svg"}
-                        alt={restaurant.name}
+                        src={(restaurant.capa || restaurant.coverImage || "/placeholder.svg") as string}
+                        alt={(restaurant.nome || restaurant.name || "Restaurante") as string}
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-sm truncate">{restaurant.name}</h4>
+                      <h4 className="font-semibold text-sm truncate">{restaurant.nome || restaurant.name || "Restaurante"}</h4>
                       <div className="flex items-center gap-1 text-xs text-muted-foreground">
                         <Badge variant="outline" className="h-5 text-xs px-1.5">
-                          {restaurant.deliveryTime}
+                          {restaurant.tempoEntregaMin}-{restaurant.tempoEntregaMax} min
                         </Badge>
-                        {restaurant.freeDelivery && (
+                        {(restaurant.entregaGratis || restaurant.freeDelivery) && (
                           <Badge className="h-5 text-xs px-1.5 bg-green-100 text-green-700 hover:bg-green-100">
                             Entrega Grátis
                           </Badge>
@@ -153,73 +154,74 @@ export function CartDrawer() {
 
               {/* Cart Items */}
               <div className="flex-1 overflow-y-auto p-6 pt-4 space-y-4">
-                {state.items.map((item) => (
-                  <div key={item.id} className="flex gap-4 p-3 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all">
-                    <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
-                      {item.menuItem.image ? (
+                {state.items.map((item) => {
+                  const price = item.menuItem.precoPromocional || item.menuItem.preco || item.menuItem.price || 0
+                  const total = price * item.quantity
+                  const itemImage = item.menuItem.imagem || item.menuItem.image || "/placeholder.svg"
+                  const itemName = item.menuItem.nome || item.menuItem.name || "Item"
+                  const itemCategory = item.menuItem.categoria || item.menuItem.category || ""
+                  return (
+                    <div key={item.id} className="flex gap-4 p-3 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all">
+                      <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
                         <Image
-                          src={item.menuItem.image}
-                          alt={item.menuItem.name}
+                          src={itemImage}
+                          alt={itemName}
                           fill
                           className="object-cover"
                         />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <span className="text-gray-400 text-2xl">🍽️</span>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="flex-1 flex flex-col justify-between py-1">
-                      <div className="flex items-start justify-between gap-2">
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-sm line-clamp-2">{item.menuItem.name}</h4>
-                          <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">
-                            {item.menuItem.category}
-                          </p>
-                        </div>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => removeItem(item.menuItem.id)}
-                          className="h-7 w-7 p-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                        >
-                          <Trash2 className="h-4 w-4" />
-                        </Button>
                       </div>
 
-                      <div className="flex items-center justify-between mt-2">
-                        <span className="font-bold text-primary text-base">
-                          R$ {(item.menuItem.price * item.quantity).toFixed(2)}
-                        </span>
-
-                        <div className="flex items-center gap-1 bg-muted p-0.5 rounded-md">
+                      <div className="flex-1 flex flex-col justify-between py-1">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-sm line-clamp-2">{itemName}</h4>
+                            <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">
+                              {itemCategory}
+                            </p>
+                          </div>
                           <Button
                             variant="ghost"
                             size="icon"
-                            onClick={() => updateQuantity(item.menuItem.id, item.quantity - 1)}
-                            className="h-8 w-8 p-0 hover:bg-background"
+                            onClick={() => removeItem(item.menuItem.id)}
+                            className="h-7 w-7 p-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                           >
-                            <Minus className="h-3.5 w-3.5" />
+                            <Trash2 className="h-4 w-4" />
                           </Button>
+                        </div>
 
-                          <span className="w-10 text-center text-sm font-semibold text-foreground">
-                            {item.quantity}
+                        <div className="flex items-center justify-between mt-2">
+                          <span className="font-bold text-primary text-base">
+                            {formatCurrency(total)}
                           </span>
 
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => updateQuantity(item.menuItem.id, item.quantity + 1)}
-                            className="h-8 w-8 p-0 hover:bg-background"
-                          >
-                            <Plus className="h-3.5 w-3.5" />
-                          </Button>
+                          <div className="flex items-center gap-1 bg-muted p-0.5 rounded-md">
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => updateQuantity(item.menuItem.id, item.quantity - 1)}
+                              className="h-8 w-8 p-0 hover:bg-background"
+                            >
+                              <Minus className="h-3.5 w-3.5" />
+                            </Button>
+
+                            <span className="w-10 text-center text-sm font-semibold text-foreground">
+                              {item.quantity}
+                            </span>
+
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => updateQuantity(item.menuItem.id, item.quantity + 1)}
+                              className="h-8 w-8 p-0 hover:bg-background"
+                            >
+                              <Plus className="h-3.5 w-3.5" />
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
 
               {/* Cart Summary */}
@@ -227,20 +229,20 @@ export function CartDrawer() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between text-sm items-center">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="font-medium">R$ {getSubtotal().toFixed(2)}</span>
+                    <span className="font-medium">{formatCurrency(getSubtotal())}</span>
                   </div>
 
                   <div className="flex justify-between text-sm items-center">
                     <span className="text-muted-foreground">Taxa de entrega</span>
                     <span className="font-medium">
-                      {getDeliveryFee() === 0 ? "Grátis" : `R$ ${getDeliveryFee().toFixed(2)}`}
+                      {getDeliveryFee() === 0 ? "Grátis" : formatCurrency(getDeliveryFee())}
                     </span>
                   </div>
 
                   {getDiscount() > 0 && (
                     <div className="flex justify-between text-sm items-center text-green-600">
                       <span>Desconto</span>
-                      <span className="font-medium">-R$ {getDiscount().toFixed(2)}</span>
+                      <span className="font-medium">-{formatCurrency(getDiscount())}</span>
                     </div>
                   )}
 
@@ -249,7 +251,7 @@ export function CartDrawer() {
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-semibold">Total</span>
                     <span className="text-xl font-bold text-primary">
-                      R$ {getTotal().toFixed(2)}
+                      {formatCurrency(getTotal())}
                     </span>
                   </div>
                 </div>

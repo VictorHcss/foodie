@@ -102,14 +102,18 @@ export default function OrdersPage() {
                       <div>
                         <h4 className="font-medium text-sm text-muted-foreground mb-2">Itens</h4>
                         <div className="space-y-2">
-                          {order.items.map((item) => (
-                            <div key={item.id} className="flex justify-between text-sm">
-                              <span>{item.quantity}x {item.menuItem.name}</span>
-                              <span className="font-medium">
-                                R$ {(item.menuItem.price * item.quantity).toFixed(2)}
-                              </span>
-                            </div>
-                          ))}
+                          {order.items.map((item) => {
+                            const itemPrice = item.menuItem.precoPromocional || item.menuItem.preco || item.menuItem.price || 0
+                            const itemName = item.menuItem.nome || item.menuItem.name || "Item"
+                            return (
+                              <div key={item.id} className="flex justify-between text-sm">
+                                <span>{item.quantity}x {itemName}</span>
+                                <span className="font-medium">
+                                  R$ {(itemPrice * item.quantity).toFixed(2)}
+                                </span>
+                              </div>
+                            )
+                          })}
                         </div>
                       </div>
                       <div>

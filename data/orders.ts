@@ -1,91 +1,44 @@
-import type { Order, User, MenuItem } from "@/lib/types";
+import type { Order } from "@/lib/types";
 
-const generateId = () => Math.random().toString(36).substr(2, 9);
+let orders: Order[] = [
+  // You can add initial orders here if needed
+];
 
-// In-memory orders storage (would be replaced by a database in production)
-let orders: Order[] = [];
-
-// Flag to track if we've loaded from localStorage
-let loadedFromStorage = false;
-
-// Load orders from localStorage (only called client-side)
-const loadOrdersFromStorage = () => {
-  if (typeof window !== "undefined" && !loadedFromStorage) {
-    loadedFromStorage = true;
-    const savedOrders = localStorage.getItem("foodie-orders");
-    if (savedOrders) {
-      try {
-        orders = JSON.parse(savedOrders);
-      } catch (error) {
-        console.error("Error loading orders from localStorage:", error);
-      }
+export function getOrdersByUserId(userId: string): Order[] {
+  // Load from localStorage
+  if (typeof window !== "undefined") {
+    const storedOrders = localStorage.getItem(`foodie-orders-${userId}`);
+    if (storedOrders) {
+      return JSON.parse(storedOrders);
     }
   }
-};
+  return orders.filter(o => o.userId === userId);
+}
 
-// Save orders to localStorage
-const saveOrders = () => {
+export function createOrder(order: Order): Order {
+  orders.push(order);
+  
+  // Save to localStorage
   if (typeof window !== "undefined") {
-    localStorage.setItem("foodie-orders", JSON.stringify(orders));
+    const userOrders = orders.filter(o => o.userId === order.userId);
+    localStorage.setItem(`foodie-orders-${order.userId}`, JSON.stringify(userOrders));
   }
-};
-
-export const createOrder = (
-  userId: string,
-  restaurantId: string,
-  restaurantName: string,
-  items: { menuItem: MenuItem; quantity: number }[],
-  subtotal: number,
-  deliveryFee: number,
-  discount: number,
-  total: number,
-  deliveryAddress: string
-): Order => {
-  const order: Order = {
-    id: generateId(),
-    userId,
-    restaurantId,
-    restaurantName,
-    items: items.map((item) => ({
-      id: generateId(),
-      menuItem: item.menuItem,
-      quantity: item.quantity,
-    })),
-    subtotal,
-    deliveryFee,
-    discount,
-    total,
-    status: "Recebido",
-    createdAt: new Date().toISOString(),
-    estimatedDeliveryTime: "30-45 min",
-    deliveryAddress,
-  };
-
-  orders.unshift(order); // Add to beginning
-  saveOrders();
+  
   return order;
-};
+}
 
-export const getOrdersByUserId = (userId: string): Order[] => {
-  loadOrdersFromStorage();
-  return orders.filter((order) => order.userId === userId);
-};
-
-export const getOrderById = (orderId: string): Order | undefined => {
-  loadOrdersFromStorage();
-  return orders.find((order) => order.id === orderId);
-};
-
-export const updateOrderStatus = (orderId: string, status: Order["status"]): Order | undefined => {
-  loadOrdersFromStorage();
-  const index = orders.findIndex((order) => order.id === orderId);
-  if (index === -1) return undefined;
-
-  orders[index] = { ...orders[index], status };
-  saveOrders();
+export function cancelOrder(orderId: string): Order | null {
+  const index = orders.findIndex(o => o.id === orderId);
+  if (index === -1) return null;
+  
+  orders[index] = { ...orders[index], status: "Cancelado" };
+  
+  // Save to localStorage
+  if (typeof window !== "undefined") {
+    const userId = orders[index].userId;
+    const userOrders = orders.filter(o => o.userId === userId);
+    localStorage.setItem(`foodie-orders-${userId}`, JSON.stringify(userOrders));
+  }
+  
   return orders[index];
-};
-
-export const cancelOrder = (orderId: string): Order | undefined => {
-  return updateOrderStatus(orderId, "Cancelado");
-};
+}

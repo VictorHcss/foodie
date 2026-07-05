@@ -1,0 +1,10 @@
+[
+  { "id": "banner-01", "titulo": "Pizzaria Bella Napoli com até 23% OFF", "subtitulo": "Peça já em Governador Valadares - MG", "imagem": "/images/categories/pizza/2.jpg", "link": "/restaurantes/pizzaria-bella-napoli", "restaurantId": "restaurante-001", "ativo": true, "ordem": 1 },
+  { "id": "banner-02", "titulo": "Conheça o Forno & Fogo Pizzaria", "subtitulo": "Peça já em Belo Horizonte - MG", "imagem": "/images/categories/pizza/2.jpg", "link": "/restaurantes/forno-fogo-pizzaria", "restaurantId": "restaurante-002", "ativo": true, "ordem": 2 },
+  { "id": "banner-03", "titulo": "Conheça o Pizza do Bairro", "subtitulo": "Peça já em Vitória - ES", "imagem": "/images/categories/pizza/2.jpg", "link": "/restaurantes/pizza-do-bairro", "restaurantId": "restaurante-003", "ativo": true, "ordem": 3 },
+  { "id": "banner-04", "titulo": "Conheça o Smash & Cia", "subtitulo": "Peça já em Rio de Janeiro - RJ", "imagem": "/images/categories/hamburguer/2.jpg", "link": "/restaurantes/smash-cia", "restaurantId": "restaurante-005", "ativo": true, "ordem": 4 },
+  { "id": "banner-05", "titulo": "Sakura Temakeria com até 35% OFF", "subtitulo": "Peça já em Recife - PE", "imagem": "/images/categories/sushi/2.jpg", "link": "/restaurantes/sakura-temakeria", "restaurantId": "restaurante-009", "ativo": true, "ordem": 5 },
+  { "id": "banner-06", "titulo": "Padaria Pão Dourado com até 28% OFF", "subtitulo": "Peça já em Fortaleza - CE", "imagem": "/images/categories/padaria/2.jpg", "link": "/restaurantes/padaria-pao-dourado", "restaurantId": "restaurante-010", "ativo": true, "ordem": 6 },
+  { "id": "banner-07", "titulo": "Conheça o Espaço Churrascaria Gaúcha", "subtitulo": "Peça já em Uberlândia - MG", "imagem": "/images/categories/churrasco/2.jpg", "link": "/restaurantes/espaco-churrascaria-gaucha", "restaurantId": "restaurante-012", "ativo": true, "ordem": 7 },
+  { "id": "banner-08", "titulo": "Fogo de Chão Express com até 24% OFF", "subtitulo": "Peça já em Juiz de Fora - MG", "imagem": "/images/categories/churrasco/2.jpg", "link": "/restaurantes/fogo-de-chao-express", "restaurantId": "restaurante-013", "ativo": true, "ordem": 8 }
+]

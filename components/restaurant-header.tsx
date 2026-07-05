@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import type { Restaurant } from "@/lib/types"
 import { CATEGORY_LABELS } from "@/lib/types"
+import { formatCurrency } from "@/utils/format"
 
 interface RestaurantHeaderProps {
   restaurant: Restaurant
@@ -13,19 +14,16 @@ interface RestaurantHeaderProps {
 }
 
 export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) {
-  const categoryLabel = CATEGORY_LABELS[restaurant.category]
+  const categoryKey = restaurant.categoriaSlug || restaurant.category || "pizza"
+  const categoryLabel = CATEGORY_LABELS[categoryKey] || categoryKey
+  const restaurantName = restaurant.nome || restaurant.name || "Restaurante"
+  const restaurantCover = restaurant.capa || restaurant.coverImage || "/placeholder.svg"
 
   return (
     <div className="relative">
       {/* Hero Image */}
       <div className="relative h-64 md:h-80 overflow-hidden bg-gray-100">
-        {restaurant.coverImage ? (
-          <Image src={restaurant.coverImage} alt={restaurant.name} fill className="object-cover" />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-gray-400 text-6xl">🍽️</span>
-          </div>
-        )}
+        <Image src={restaurantCover} alt={restaurantName} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
         {/* Back Button */}
@@ -48,32 +46,28 @@ export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) 
               </Badge>
             </div>
 
-            <h1 className="font-serif font-bold text-3xl md:text-4xl">{restaurant.name}</h1>
+            <h1 className="font-serif font-bold text-3xl md:text-4xl">{restaurantName}</h1>
 
             <div className="flex flex-wrap items-center gap-4 text-sm">
-              {restaurant.rating !== undefined && (
-                <div className="flex items-center gap-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  <span className="font-medium">{restaurant.rating.toFixed(1)}</span>
-                  {restaurant.reviewCount !== undefined && (
-                    <span className="text-white/80">({restaurant.reviewCount} avaliações)</span>
-                  )}
-                </div>
-              )}
+              <div className="flex items-center gap-1">
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <span className="font-medium">{restaurant.nota.toFixed(1)}</span>
+                <span className="text-white/80">({restaurant.avaliacoes} avaliações)</span>
+              </div>
 
               <div className="flex items-center gap-1 text-white/80">
                 <Clock className="h-4 w-4" />
-                <span>{restaurant.deliveryTime}</span>
+                <span>{restaurant.tempoEntregaMin}-{restaurant.tempoEntregaMax} min</span>
               </div>
 
               <div className="flex items-center gap-1 text-white/80">
                 <DollarSign className="h-4 w-4" />
-                <span>{restaurant.priceRange}</span>
+                <span>{restaurant.faixaDePreco}</span>
               </div>
 
               <div className="flex items-center gap-1 text-white/80">
                 <MapPin className="h-4 w-4" />
-                <span>{restaurant.neighborhood}</span>
+                <span>{restaurant.bairro || restaurant.neighborhood || restaurant.cidade}</span>
               </div>
             </div>
           </div>
@@ -86,7 +80,7 @@ export function RestaurantHeader({ restaurant, onBack }: RestaurantHeaderProps) 
           <div className="flex items-center justify-between text-sm">
             <span className="text-muted-foreground">Taxa de entrega:</span>
             <span className="font-medium text-primary">
-              {restaurant.freeDelivery ? "Grátis" : `R$ ${restaurant.deliveryFee.toFixed(2)}`}
+              {restaurant.entregaGratis || restaurant.freeDelivery ? "Grátis" : formatCurrency(restaurant.taxaEntrega || restaurant.deliveryFee || 0)}
             </span>
           </div>
         </div>

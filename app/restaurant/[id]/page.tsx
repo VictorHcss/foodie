@@ -16,12 +16,14 @@ import {
   Clock,
   ShoppingCart,
 } from "lucide-react";
-import type { Restaurant, MenuItem } from "@/lib/types";
-import { CATEGORY_LABELS } from "@/lib/types";
-import { getRestaurantById } from "@/data/restaurants";
+import type { Restaurant, Product } from "@/lib/types";
+import { getRestaurantById } from "@/services/restaurants.service";
+import { getProductsByRestaurant } from "@/services/products.service";
 import { useCart } from "@/contexts/cart-context";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
+import { formatCurrency } from "@/utils/format";
+import { CATEGORY_LABELS } from "@/lib/types";
 
 interface RestaurantPageProps {
   params: Promise<{ id: string }>;
@@ -30,6 +32,7 @@ interface RestaurantPageProps {
 export default function RestaurantPage({ params }: RestaurantPageProps) {
   const resolvedParams = use(params);
   const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
@@ -46,6 +49,8 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
           throw new Error("Restaurante não encontrado");
         }
         setRestaurant(data);
+        const restaurantProducts = getProductsByRestaurant(resolvedParams.id);
+        setProducts(restaurantProducts);
       } catch (err) {
         setError("Restaurante não encontrado");
         console.error("Error loading restaurant:", err);
@@ -57,13 +62,25 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
     loadRestaurant();
   }, [resolvedParams.id]);
 
-  const handleAddToCart = (menuItem: MenuItem) => {
+  const handleAddToCart = (product: Product) => {
     if (!restaurant) return;
 
-    addItem(menuItem, restaurant.id);
+    addItem({
+      id: product.id,
+      menuItem: {
+        ...product,
+        name: product.nome,
+        description: product.descricao,
+        isAvailable: product.disponivel,
+        image: product.imagem,
+        isFeatured: product.destaque,
+      },
+      restaurantId: restaurant.id,
+    } as any, restaurant.id);
+    
     toast({
       title: "Item adicionado!",
-      description: `${menuItem.name} foi adicionado ao seu carrinho.`,
+      description: `${product.nome} foi adicionado ao seu carrinho.`,
       action: (
         <ToastAction altText="Ver carrinho" onClick={openCart}>
           Ver carrinho
@@ -100,18 +117,21 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
     );
   }
 
-  const categoryLabel = CATEGORY_LABELS[restaurant.category];
+  const categoryLabel = restaurant.categoriaSlug 
+    ? (CATEGORY_LABELS[restaurant.categoriaSlug] || restaurant.categoriaSlug) 
+    : "Restaurante";
 
   // Group menu items by category
-  const menuByCategory = restaurant.menu.reduce(
+  const menuByCategory = products.reduce(
     (acc, item) => {
-      if (!acc[item.category]) {
-        acc[item.category] = [];
+      const category = item.categoria || item.category || "Outros";
+      if (!acc[category]) {
+        acc[category] = [];
       }
-      acc[item.category].push(item);
+      acc[category].push(item);
       return acc;
     },
-    {} as Record<string, MenuItem[]>
+    {} as Record<string, Product[]>
   );
 
   return (
@@ -128,10 +148,16 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
         <div className="grid lg:grid-cols-3 gap-8 mb-8">
           <div className="lg:col-span-2 space-y-6">
             <div className="relative rounded-lg overflow-hidden h-64 bg-gray-100">
-              {restaurant.coverImage ? (
+              {restaurant.capa ? (
+                <img
+                  src={restaurant.capa}
+                  alt={restaurant.nome}
+                  className="w-full h-full object-cover"
+                />
+              ) : restaurant.coverImage ? (
                 <img
                   src={restaurant.coverImage}
-                  alt={restaurant.name}
+                  alt={restaurant.nome}
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -145,11 +171,11 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
               <div className="flex items-start justify-between">
                 <div className="space-y-2">
                   <h1 className="font-serif font-bold text-3xl text-foreground">
-                    {restaurant.name}
+                    {restaurant.nome}
                   </h1>
                   <div className="flex items-center gap-2 flex-wrap">
                     <Badge variant="secondary">{categoryLabel}</Badge>
-                    {restaurant.isOpenNow ? (
+                    {restaurant.aberto ? (
                       <Badge variant="default">Aberto agora</Badge>
                     ) : (
                       <Badge variant="destructive">Fechado</Badge>
@@ -161,19 +187,19 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
                   <div className="flex items-center gap-1">
                     <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     <span className="font-bold text-lg">
-                      {restaurant.rating.toFixed(1)}
+                      {restaurant.nota.toFixed(1)}
                     </span>
                     <span className="text-muted-foreground text-sm">
-                      ({restaurant.reviewCount} avaliações)
+                      ({restaurant.avaliacoes} avaliações)
                     </span>
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    {restaurant.priceRange}
+                    {restaurant.faixaDePreco}
                   </div>
                 </div>
               </div>
 
-              <p className="text-muted-foreground">{restaurant.description}</p>
+              <p className="text-muted-foreground">{restaurant.descricao}</p>
             </div>
           </div>
 
@@ -186,64 +212,42 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
                 </h3>
 
                 <div className="space-y-3">
-                  {restaurant.address && (
+                  {restaurant.endereco && (
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium">Endereço</p>
                         <p className="text-sm text-muted-foreground">
-                          {restaurant.address}
+                          {restaurant.endereco}
                         </p>
                       </div>
                     </div>
                   )}
 
-                  {restaurant.phone && (
+                  {restaurant.telefone && (
                     <div className="flex items-start gap-3">
                       <Phone className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium">Telefone</p>
                         <a
-                          href={`tel:${restaurant.phone}`}
+                          href={`tel:${restaurant.telefone}`}
                           className="text-sm text-primary hover:underline"
                         >
-                          {restaurant.phone}
+                          {restaurant.telefone}
                         </a>
                       </div>
                     </div>
                   )}
 
-                  {restaurant.website && (
-                    <div className="flex items-start gap-3">
-                      <Globe className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm font-medium">Website</p>
-                        <a
-                          href={
-                            restaurant.website.startsWith("http")
-                              ? restaurant.website
-                              : `https://${restaurant.website}`
-                          }
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-primary hover:underline"
-                        >
-                          {restaurant.website}
-                        </a>
-                      </div>
-                    </div>
-                  )}
-
-                  {restaurant.openingHours.length > 0 && (
+                  {restaurant.horario && (
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                       <div>
                         <p className="text-sm font-medium">Horário de Funcionamento</p>
-                        <ul className="text-sm text-muted-foreground">
-                          {restaurant.openingHours.map((hours, index) => (
-                            <li key={index}>{hours}</li>
-                          ))}
-                        </ul>
+                        <div className="text-sm text-muted-foreground">
+                          <p>Abertura: {restaurant.horario.abertura}</p>
+                          <p>Fechamento: {restaurant.horario.fechamento}</p>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -256,7 +260,9 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
         {/* Menu */}
         <div className="space-y-8">
           <div>
-            <h2 className="font-serif font-bold text-2xl text-foreground mb-2">Menu</h2>
+            <h2 className="font-serif font-bold text-2xl text-foreground mb-2">
+              Menu
+            </h2>
             <p className="text-muted-foreground">
               Escolha seus pratos favoritos e adicione ao carrinho
             </p>
@@ -273,10 +279,16 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
                     <CardContent className="p-0">
                       <div className="flex">
                         <div className="w-1/3 bg-gray-100">
-                          {item.image ? (
+                          {item.imagem ? (
+                            <img
+                              src={item.imagem}
+                              alt={item.nome}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : item.image ? (
                             <img
                               src={item.image}
-                              alt={item.name}
+                              alt={item.nome}
                               className="w-full h-full object-cover"
                             />
                           ) : (
@@ -287,22 +299,24 @@ export default function RestaurantPage({ params }: RestaurantPageProps) {
                         </div>
                         <div className="flex-1 p-4">
                           <div className="flex items-start justify-between gap-2">
-                            <h4 className="font-semibold text-foreground">{item.name}</h4>
+                            <h4 className="font-semibold text-foreground">
+                              {item.nome}
+                            </h4>
                             <p className="text-primary font-bold">
-                              R$ {item.price.toFixed(2)}
+                              {formatCurrency(item.precoPromocional || item.preco || item.price || 0)}
                             </p>
                           </div>
                           <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                            {item.description}
+                            {item.descricao}
                           </p>
                           <Button
                             onClick={() => handleAddToCart(item)}
-                            disabled={!item.isAvailable}
+                            disabled={!item.disponivel}
                             size="sm"
                             className="mt-3 w-full"
                           >
                             <ShoppingCart className="h-4 w-4 mr-2" />
-                            {item.isAvailable ? "Adicionar" : "Indisponível"}
+                            {item.disponivel ? "Adicionar" : "Indisponível"}
                           </Button>
                         </div>
                       </div>

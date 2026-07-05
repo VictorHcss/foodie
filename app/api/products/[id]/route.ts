@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiSuccess, apiError } from "@/lib/api-response";
-import { getRestaurantById } from "@/services/restaurants.service";
+import { getProductById } from "@/services/products.service";
 
 export async function GET(request: NextRequest, props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
-  const restaurant = getRestaurantById(params.id);
+  const product = getProductById(params.id);
 
-  if (!restaurant) {
-    return apiError("Restaurante não encontrado", 404);
+  if (!product) {
+    return apiError("Produto não encontrado", 404);
   }
 
-  return apiSuccess(restaurant);
+  return apiSuccess(product);
 }

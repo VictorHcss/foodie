@@ -3,7 +3,7 @@
 import type React from "react";
 import { createContext, useContext, useReducer, useEffect } from "react";
 import type { MenuItem, CartItem } from "@/lib/types";
-import { getRestaurantById } from "@/data/restaurants";
+import { getRestaurantById } from "@/services/restaurants.service";
 
 interface CartState {
   items: CartItem[];
@@ -199,7 +199,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const getSubtotal = () => {
     return state.items.reduce(
-      (total, item) => total + item.menuItem.price * item.quantity,
+      (total, item) => total + (item.menuItem.precoPromocional || item.menuItem.preco || item.menuItem.price || 0) * item.quantity,
       0
     );
   };
@@ -208,7 +208,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     if (!state.restaurantId || state.items.length === 0) return 0;
     const restaurant = getRestaurantById(state.restaurantId);
     if (!restaurant) return 0;
-    return restaurant.freeDelivery ? 0 : restaurant.deliveryFee;
+    return (restaurant.entregaGratis || restaurant.freeDelivery) ? 0 : (restaurant.taxaEntrega || restaurant.deliveryFee || 0);
   };
 
   const getDiscount = () => {

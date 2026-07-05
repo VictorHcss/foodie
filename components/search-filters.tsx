@@ -16,28 +16,26 @@ import { Label } from "@/components/ui/label";
 import {
   RESTAURANT_CATEGORIES,
   CATEGORY_LABELS,
-  type SearchFilters,
-  type RestaurantCategory,
-  type PriceRange,
+  SearchFilters as SearchFiltersType,
 } from "@/lib/types";
 
-const PRICE_RANGES: PriceRange[] = ["$", "$$", "$$$"];
+const PRICE_RANGES = ["$", "$$", "$$$"];
 const CITIES = ["Governador Valadares", "Belo Horizonte", "São Paulo", "Rio de Janeiro"];
 
 interface SearchFiltersProps {
-  onFiltersChange: (filters: SearchFilters) => void;
+  onFiltersChange: (filters: SearchFiltersType) => void;
 }
 
 export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
   const [searchText, setSearchText] = useState("");
-  const [categories, setCategories] = useState<RestaurantCategory[]>([...RESTAURANT_CATEGORIES]);
+  const [categories, setCategories] = useState<string[]>([...RESTAURANT_CATEGORIES]);
   const [cities, setCities] = useState<string[]>([...CITIES]);
-  const [priceRanges, setPriceRanges] = useState<PriceRange[]>([...PRICE_RANGES]);
+  const [priceRanges, setPriceRanges] = useState<string[]>([...PRICE_RANGES]);
   const [minRating, setMinRating] = useState(0);
   const [isOpenNow, setIsOpenNow] = useState(false);
   const [isFeatured, setIsFeatured] = useState(false);
 
-  const toggleCategory = (category: RestaurantCategory) => {
+  const toggleCategory = (category: string) => {
     setCategories((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
@@ -53,7 +51,7 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
     );
   };
 
-  const togglePriceRange = (range: PriceRange) => {
+  const togglePriceRange = (range: string) => {
     setPriceRanges((prev) =>
       prev.includes(range)
         ? prev.filter((r) => r !== range)
@@ -75,12 +73,13 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
   const applyFilters = () => {
     onFiltersChange({
       search: searchText,
+      busca: searchText,
       categories: categories.length === RESTAURANT_CATEGORIES.length ? undefined : categories,
       cities: cities.length === CITIES.length ? undefined : cities,
-      priceRanges: priceRanges.length === PRICE_RANGES.length ? undefined : priceRanges,
-      minRating: minRating > 0 ? minRating : undefined,
-      isOpenNow: isOpenNow || undefined,
-      isFeatured: isFeatured || undefined,
+      priceRanges: priceRanges.length === PRICE_RANGES.length ? undefined : priceRanges as any,
+      notaMin: minRating > 0 ? minRating : undefined,
+      aberto: isOpenNow || undefined,
+      destaque: isFeatured || undefined,
     });
   };
 
@@ -145,7 +144,7 @@ export function SearchFilters({ onFiltersChange }: SearchFiltersProps) {
                         onCheckedChange={() => toggleCategory(category)}
                       />
                       <Label htmlFor={category} className="text-sm">
-                        {CATEGORY_LABELS[category]}
+                        {CATEGORY_LABELS[category] || category}
                       </Label>
                     </div>
                   ))}
