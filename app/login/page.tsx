@@ -1,61 +1,65 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { useAuth } from "@/contexts/auth-context"
-import { useToast } from "@/components/ui/use-toast"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { useAuth } from "@/contexts/auth-context";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [loading, setLoading] = useState(false)
-  const { login } = useAuth()
-  const router = useRouter()
-  const { toast } = useToast()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const router = useRouter();
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     try {
-      const success = await login(email, password)
+      const success = await login(email, password);
       if (success) {
         toast({
           title: "Login realizado com sucesso!",
           description: "Bem-vindo de volta!",
-        })
-        router.push("/")
+        });
+        router.push("/");
       } else {
         toast({
           title: "Erro no login",
           description: "Email ou senha incorretos.",
           variant: "destructive",
-        })
+        });
       }
     } catch (error) {
       toast({
         title: "Erro no login",
         description: "Ocorreu um erro. Tente novamente.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="font-serif text-2xl">Entrar</CardTitle>
-          <CardDescription>
-            Acesse sua conta para continuar
-          </CardDescription>
+          <CardDescription>Acesse sua conta para continuar</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -92,14 +96,8 @@ export default function LoginPage() {
               Cadastre-se
             </Link>
           </div>
-
-          <div className="mt-4 p-3 bg-muted rounded-lg text-sm">
-            <p className="font-medium mb-1">Dados de teste:</p>
-            <p className="text-muted-foreground">Email: joao@example.com</p>
-            <p className="text-muted-foreground">Senha: 123456</p>
-          </div>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
