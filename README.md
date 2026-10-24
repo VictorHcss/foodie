@@ -20,15 +20,15 @@ O objetivo é construir uma experiência de navegação intuitiva, reunindo desc
 
 ## 🛠️ Tecnologias utilizadas
 
-| Tecnologia                                 | Aplicação no projeto                             |
-| ------------------------------------------ | ------------------------------------------------ |
-| Next.js 15                                 | Estrutura da aplicação e roteamento              |
-| React 19                                   | Construção da interface por componentes          |
-| TypeScript                                 | Tipagem estática, conforme utilizada no código   |
-| Tailwind CSS 4                             | Estilização da interface                         |
-| shadcn/ui                                  | Componentes de interface reutilizáveis           |
-| Context API                                | Gerenciamento compartilhado da conta e da sacola |
-| Local Storage / armazenamento no navegador | Persistência das interações de demonstração      |
+| Tecnologia | Aplicação no projeto |
+|---|---|
+| Next.js 15 | Estrutura da aplicação e roteamento |
+| React 19 | Construção da interface por componentes |
+| TypeScript | Tipagem estática, conforme utilizada no código |
+| Tailwind CSS 4 | Estilização da interface |
+| shadcn/ui | Componentes de interface reutilizáveis |
+| Context API | Gerenciamento compartilhado da conta e da sacola |
+| Local Storage / armazenamento no navegador | Persistência das interações de demonstração |
 
 ## Como executar localmente
 
@@ -41,7 +41,7 @@ O objetivo é construir uma experiência de navegação intuitiva, reunindo desc
 ### 1. Clone o repositório
 
 ```bash
-git clone URL_DO_SEU_REPOSITORIO
+git clone https://github.com/VictorHcss/foodie
 ```
 
 Entre na pasta do projeto:
@@ -49,8 +49,6 @@ Entre na pasta do projeto:
 ```bash
 cd foodie
 ```
-
-Substitua `URL_DO_SEU_REPOSITORIO` pelo endereço real do repositório no GitHub.
 
 ### 2. Instale as dependências
 
@@ -75,15 +73,15 @@ Abra [http://localhost:3000](http://localhost:3000) no navegador.
 - **E-mail:** `joao@example.com`
 - **Senha:** `senha123`
 
-Também é possível utilizar o botão **"Preencher para mim"** na tela de login, quando disponível.
+Também é possível utilizar o botão **"Preencher para mim"** na tela de login.
 
 ### Cupons de demonstração
 
-| Cupom         | Regra                                                         |
-| ------------- | ------------------------------------------------------------- |
-| `BEMVINDO10`  | 10% de desconto em pedidos a partir de R$ 30                  |
+| Cupom | Regra |
+|---|---|
+| `BEMVINDO10` | 10% de desconto em pedidos a partir de R$ 30 |
 | `FRETEGRATIS` | Até R$ 8 de desconto na entrega, em pedidos a partir de R$ 50 |
-| `PIZZA15`     | Cupom expirado em 30/09/2026                                  |
+| `PIZZA15` | Cupom expirado em 30/09/2026 |
 
 Os cupons servem para testar as regras de desconto implementadas no projeto.
 
@@ -131,7 +129,7 @@ O Foodie utiliza dados de demonstração armazenados na pasta `data/`. As intera
 
 **Importante:** a versão atual não deve ser considerada um serviço de delivery em produção. Os dados e fluxos simulados não representam necessariamente restaurantes, pedidos ou transações reais. A persistência local também não equivale a uma conta sincronizada entre dispositivos.
 
-## 🔮 Próximas evoluções
+## Próximas evoluções
 
 Possíveis melhorias para as próximas versões:
 
@@ -144,7 +142,7 @@ Possíveis melhorias para as próximas versões:
 
 Esta lista representa possibilidades futuras, não funcionalidades já implementadas.
 
-## Sobre o projeto
+##  Sobre o projeto
 
 O Foodie é um projeto de desenvolvimento web criado para praticar e demonstrar habilidades em construção de interfaces, organização de componentes, gerenciamento de estado e implementação de fluxos interativos.
 
