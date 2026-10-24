@@ -3,75 +3,93 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+  Foodie — tokens
+  Tinta (café torrado), mostarda, couve e pimenta. A mostarda é a cor de
+  assinatura: aparece em blocos grandes ( ro, botão principal) e quase
+  nunca em detalhes pequenos.
+*/
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.295 0.014 258.338);
-  --card: oklch(0.976 0.006 258.338);
-  --card-foreground: oklch(0.295 0.014 258.338);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.295 0.014 258.338);
-  --primary: oklch(0.454 0.152 166.014);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.631 0.138 166.014);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.976 0.006 258.338);
-  --muted-foreground: oklch(0.295 0.014 258.338);
-  --accent: oklch(0.631 0.138 166.014);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.576 0.204 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.922 0.013 258.338);
-  --input: oklch(1 0 0);
-  --ring: oklch(0.454 0.152 166.014 / 0.5);
-  --chart-1: oklch(0.454 0.152 166.014);
-  --chart-2: oklch(0.631 0.138 166.014);
-  --chart-3: oklch(0.576 0.204 27.325);
-  --chart-4: oklch(0.647 0.204 27.325);
-  --chart-5: oklch(0.427 0.204 60.229);
-  --radius: 0.5rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.295 0.014 258.338);
-  --sidebar-primary: oklch(0.454 0.152 166.014);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.631 0.138 166.014);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.922 0.013 258.338);
-  --sidebar-ring: oklch(0.454 0.152 166.014 / 0.5);
+  --ink: #241c16;
+  --mustard: #f2b705;
+  --mustard-deep: #d99e00;
+  --couve: #1e6b4e;
+  --pimenta: #d1372a;
+  --paper: #ffffff;
+  --surface: #f4f2ee;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface);
+  --muted-foreground: #6b625a;
+  --accent: #ece8e1;
+  --accent-foreground: var(--ink);
+  --brand: var(--mustard);
+  --brand-foreground: var(--ink);
+  --success: var(--couve);
+  --destructive: var(--pimenta);
+  --destructive-foreground: #ffffff;
+  --border: #e6e1d9;
+  --input: #ddd6cc;
+  --ring: #f2b705;
+  --radius: 0.875rem;
+
+  --chart-1: var(--mustard);
+  --chart-2: var(--couve);
+  --chart-3: var(--pimenta);
+  --chart-4: #8a6d55;
+  --chart-5: #3d6f8f;
+
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--ink);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--surface);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.631 0.138 166.014);
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.631 0.138 166.014);
-  --accent-foreground: oklch(0.145 0 0);
-  --destructive: oklch(0.576 0.204 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.631 0.138 166.014 / 0.5);
-  --chart-1: oklch(0.631 0.138 166.014);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.576 0.204 27.325);
-  --chart-4: oklch(0.647 0.204 27.325);
-  --chart-5: oklch(0.427 0.204 60.229);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.631 0.138 166.014);
-  --sidebar-primary-foreground: oklch(0.145 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.631 0.138 166.014 / 0.5);
+  --background: #16120f;
+  --foreground: #f3eee8;
+  --card: #201a16;
+  --card-foreground: #f3eee8;
+  --popover: #201a16;
+  --popover-foreground: #f3eee8;
+  --primary: #f3eee8;
+  --primary-foreground: #16120f;
+  --secondary: #2a231e;
+  --secondary-foreground: #f3eee8;
+  --muted: #2a231e;
+  --muted-foreground: #b2a89e;
+  --accent: #332a24;
+  --accent-foreground: #f3eee8;
+  --brand: #f2b705;
+  --brand-foreground: #241c16;
+  --success: #4cb48a;
+  --destructive: #ef5a4c;
+  --destructive-foreground: #16120f;
+  --border: #352c26;
+  --input: #42372f;
+  --ring: #f2b705;
+
+  --sidebar: #201a16;
+  --sidebar-foreground: #f3eee8;
+  --sidebar-primary: #f3eee8;
+  --sidebar-primary-foreground: #16120f;
+  --sidebar-accent: #2a231e;
+  --sidebar-accent-foreground: #f3eee8;
+  --sidebar-border: #352c26;
+  --sidebar-ring: #f2b705;
 }
 
 @theme inline {
@@ -89,6 +107,9 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-success: var(--success);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -99,10 +120,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -111,15 +132,76 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: var(--font-source-sans);
-  --font-serif: var(--font-playfair);
+  --font-sans: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/60;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--mustard);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  /* Títulos em Bricolage condensada: a tipografia é o elemento de marca. */
+  .font-display {
+    font-family: var(--font-display);
+    font-stretch: 82%;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+  .font-display-wide {
+    font-family: var(--font-display);
+    font-stretch: 100%;
+    letter-spacing: -0.01em;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .container-page {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

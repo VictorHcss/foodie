@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Star } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 interface StarRatingProps {
   rating: number
@@ -10,57 +11,45 @@ interface StarRatingProps {
   size?: "sm" | "md" | "lg"
 }
 
+const LABELS = ["", "Ruim", "Fraco", "Bom", "Muito bom", "Excelente"]
+
 export function StarRating({ rating, onRatingChange, readonly = false, size = "md" }: StarRatingProps) {
-  const [hoverRating, setHoverRating] = useState(0)
+  const [hover, setHover] = useState(0)
+  const sz = { sm: "size-4", md: "size-5", lg: "size-8" }[size]
+  const shown = hover || rating
 
-  const sizeClasses = {
-    sm: "h-4 w-4",
-    md: "h-5 w-5",
-    lg: "h-6 w-6",
-  }
-
-  const handleClick = (value: number) => {
-    if (!readonly && onRatingChange) {
-      onRatingChange(value)
-    }
-  }
-
-  const handleMouseEnter = (value: number) => {
-    if (!readonly) {
-      setHoverRating(value)
-    }
-  }
-
-  const handleMouseLeave = () => {
-    if (!readonly) {
-      setHoverRating(0)
-    }
+  if (readonly) {
+    return (
+      <span className="inline-flex items-center gap-0.5" aria-label={`${rating} de 5 estrelas`}>
+        {Array.from({ length: 5 }, (_, i) => (
+          <Star key={i} aria-hidden className={cn(sz, i < Math.round(rating) ? "fill-[var(--mustard)] text-[var(--mustard)]" : "text-border")} />
+        ))}
+      </span>
+    )
   }
 
   return (
-    <div className="flex items-center gap-1">
-      {Array.from({ length: 5 }, (_, i) => {
-        const starValue = i + 1
-        const isActive = (hoverRating || rating) >= starValue
-
-        return (
-          <Star
-            key={i}
-            className={`${sizeClasses[size]} transition-colors duration-200 ${
-              readonly
-                ? isActive
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "text-gray-300"
-                : isActive
-                  ? "fill-yellow-400 text-yellow-400 cursor-pointer"
-                  : "text-gray-300 cursor-pointer hover:text-yellow-400"
-            }`}
-            onClick={() => handleClick(starValue)}
-            onMouseEnter={() => handleMouseEnter(starValue)}
-            onMouseLeave={handleMouseLeave}
-          />
-        )
-      })}
+    <div className="flex items-center gap-3">
+      <div role="radiogroup" aria-label="Sua nota" className="flex" onMouseLeave={() => setHover(0)}>
+        {Array.from({ length: 5 }, (_, i) => {
+          const v = i + 1
+          return (
+            <button
+              key={v}
+              type="button"
+              role="radio"
+              aria-checked={rating === v}
+              aria-label={`${v} ${v === 1 ? "estrela" : "estrelas"}, ${LABELS[v]}`}
+              onClick={() => onRatingChange?.(v)}
+              onMouseEnter={() => setHover(v)}
+              className="rounded-md p-0.5 transition-transform hover:scale-110"
+            >
+              <Star className={cn(sz, "transition-colors", shown >= v ? "fill-[var(--mustard)] text-[var(--mustard)]" : "text-input")} />
+            </button>
+          )
+        })}
+      </div>
+      <span className="text-sm font-medium text-muted-foreground">{shown ? LABELS[shown] : "Toque para dar nota"}</span>
     </div>
   )
 }

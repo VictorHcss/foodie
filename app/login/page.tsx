@@ -1,103 +1,116 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { useAuth } from "@/contexts/auth-context";
-import { useToast } from "@/components/ui/use-toast";
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import Link from "next/link"
+import { toast } from "sonner"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { AuthShell } from "@/components/auth/auth-shell"
+import { FieldError, PasswordInput } from "@/components/auth/password-input"
+import { useAuth } from "@/contexts/auth-context"
+import { useCart } from "@/contexts/cart-context"
+
+const DEMO = { email: "joao@example.com", password: "senha123" }
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const { login } = useAuth();
-  const router = useRouter();
-  const { toast } = useToast();
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const { login, state } = useAuth()
+  const { openCart } = useCart()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (state.ready && state.user) router.replace("/")
+  }, [state.ready, state.user, router])
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      const success = await login(email, password);
-      if (success) {
-        toast({
-          title: "Login realizado com sucesso!",
-          description: "Bem-vindo de volta!",
-        });
-        router.push("/");
-      } else {
-        toast({
-          title: "Erro no login",
-          description: "Email ou senha incorretos.",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "Erro no login",
-        description: "Ocorreu um erro. Tente novamente.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
+    e.preventDefault()
+    setError("")
+    setLoading(true)
+    const ok = await login(email, password)
+    setLoading(false)
+    if (!ok) {
+      setError("E-mail ou senha não conferem. Confira e tente de novo.")
+      return
     }
-  };
+    toast.success("Que bom te ver de novo!")
+    const next = new URLSearchParams(window.location.search).get("next")
+    router.push("/")
+    if (next === "checkout") setTimeout(openCart, 300)
+  }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <CardTitle className="font-serif text-2xl">Entrar</CardTitle>
-          <CardDescription>Acesse sua conta para continuar</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="seu@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Senha</Label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="Sua senha"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "Entrando..." : "Entrar"}
-            </Button>
-          </form>
+    <AuthShell
+      headline={
+        <>
+          Bom te ver
+          <br />
+          de novo.
+        </>
+      }
+    >
+      <h1 className="font-display text-5xl font-extrabold">Entrar</h1>
+      <p className="mt-2 text-muted-foreground">
+        Ainda não tem conta?{" "}
+        <Link href="/register" className="font-semibold text-foreground underline underline-offset-4">
+          Crie em 1 minuto
+        </Link>
+      </p>
 
-          <div className="mt-6 text-center text-sm">
-            <span className="text-muted-foreground">Não tem uma conta? </span>
-            <Link href="/register" className="text-primary hover:underline">
-              Cadastre-se
-            </Link>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  );
+      <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
+        <div>
+          <Label htmlFor="email" className="mb-1.5">E-mail</Label>
+          <Input
+            id="email"
+            type="email"
+            autoComplete="email"
+            placeholder="voce@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="h-12 rounded-xl"
+          />
+        </div>
+        <div>
+          <Label htmlFor="password" className="mb-1.5">Senha</Label>
+          <PasswordInput
+            id="password"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            aria-invalid={!!error}
+            aria-describedby={error ? "login-error" : undefined}
+            className="h-12 rounded-xl"
+          />
+          <FieldError id="login-error">{error}</FieldError>
+        </div>
+        <Button type="submit" className="h-12 w-full rounded-full text-base font-bold" disabled={loading || !email || !password}>
+          {loading ? "Entrando…" : "Entrar"}
+        </Button>
+      </form>
+
+      <div className="mt-8 rounded-2xl bg-secondary p-4 text-sm">
+        <p className="font-semibold">Só quer testar?</p>
+        <p className="mt-1 text-muted-foreground">
+          Use a conta de demonstração: {DEMO.email}, senha {DEMO.password}.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setEmail(DEMO.email)
+            setPassword(DEMO.password)
+            setError("")
+          }}
+          className="mt-2 font-semibold underline underline-offset-4"
+        >
+          Preencher para mim
+        </button>
+      </div>
+    </AuthShell>
+  )
 }

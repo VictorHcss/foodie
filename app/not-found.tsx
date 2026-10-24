@@ -1,26 +1,29 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Home } from "lucide-react"
+import { Brand } from "@/components/brand"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-16">
-      <div className="text-center space-y-6 max-w-md">
-        <div className="space-y-2">
-          <h1 className="font-serif font-bold text-6xl text-primary">404</h1>
-          <h2 className="font-serif font-semibold text-2xl text-foreground">Página não encontrada</h2>
-          <p className="text-muted-foreground">
-            A página que você está procurando não existe ou foi movida.
+    <div className="flex min-h-screen flex-col">
+      <header className="container-page flex h-16 items-center">
+        <Brand />
+      </header>
+      <main className="container-page grid flex-1 place-items-center pb-20">
+        <div className="text-center">
+          <p className="text-[96px] leading-none" aria-hidden>
+            🍽️
           </p>
-        </div>
-        
-        <Button asChild className="w-full sm:w-auto">
-          <Link href="/" className="flex items-center gap-2">
-            <Home className="h-4 w-4" />
-            Voltar para a página inicial
+          <h1 className="font-display mt-6 text-6xl font-extrabold md:text-7xl">Prato vazio</h1>
+          <p className="mx-auto mt-3 max-w-sm text-muted-foreground">
+            Essa página não existe ou o restaurante saiu do Foodie. Volte para a lista e escolha outro.
+          </p>
+          <Link
+            href="/"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-brand px-7 font-bold text-brand-foreground hover:bg-[var(--mustard-deep)]"
+          >
+            Ver restaurantes
           </Link>
-        </Button>
-      </div>
+        </div>
+      </main>
     </div>
   )
 }

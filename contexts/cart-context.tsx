@@ -1,247 +1,238 @@
-"use client";
+"use client"
 
-import type React from "react";
-import { createContext, useContext, useReducer, useEffect } from "react";
-import type { MenuItem, CartItem } from "@/lib/types";
-import { getRestaurantById } from "@/services/restaurants.service";
+import type React from "react"
+import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useState } from "react"
+import type { Adicional, CartItem, Coupon, MenuItem } from "@/lib/types"
+import { getRestaurantById } from "@/services/restaurants.service"
+import { cartItemUnitPrice, checkCoupon, couponDiscount, unitPriceWith, COUPONS } from "@/lib/pricing"
 
 interface CartState {
-  items: CartItem[];
-  isOpen: boolean;
-  restaurantId?: string;
+  items: CartItem[]
+  isOpen: boolean
+  restaurantId?: string
+  couponCode?: string
+}
+
+export interface AddItemOptions {
+  quantity?: number
+  adicionais?: Adicional[]
+  observacao?: string
+}
+
+interface PendingAdd {
+  menuItem: MenuItem
+  restaurantId: string
+  options: AddItemOptions
 }
 
 type CartAction =
-  | { type: "ADD_ITEM"; payload: { menuItem: MenuItem; restaurantId: string } }
-  | { type: "REMOVE_ITEM"; payload: { itemId: string } }
-  | { type: "UPDATE_QUANTITY"; payload: { itemId: string; quantity: number } }
+  | { type: "ADD_ITEM"; payload: { menuItem: MenuItem; restaurantId: string; options: AddItemOptions } }
+  | { type: "REPLACE_WITH"; payload: { menuItem: MenuItem; restaurantId: string; options: AddItemOptions } }
+  | { type: "REMOVE_ITEM"; payload: { cartItemId: string } }
+  | { type: "UPDATE_QUANTITY"; payload: { cartItemId: string; quantity: number } }
   | { type: "CLEAR_CART" }
   | { type: "TOGGLE_CART" }
   | { type: "OPEN_CART" }
   | { type: "CLOSE_CART" }
-  | { type: "LOAD_CART"; payload: { items: CartItem[]; restaurantId?: string } };
+  | { type: "SET_COUPON"; payload?: string }
+  | { type: "LOAD_CART"; payload: { items: CartItem[]; restaurantId?: string; couponCode?: string } }
 
 interface CartContextType {
-  state: CartState;
-  addItem: (menuItem: MenuItem, restaurantId: string) => void;
-  removeItem: (itemId: string) => void;
-  updateQuantity: (itemId: string, quantity: number) => void;
-  clearCart: () => void;
-  toggleCart: () => void;
-  openCart: () => void;
-  closeCart: () => void;
-  getTotalItems: () => number;
-  getSubtotal: () => number;
-  getDeliveryFee: () => number;
-  getDiscount: () => number;
-  getTotal: () => number;
+  state: CartState
+  /** Adiciona o item. Se a sacola for de outro restaurante, pede confirmação antes. */
+  addItem: (menuItem: MenuItem, restaurantId: string, options?: AddItemOptions) => "added" | "needs-confirmation"
+  removeItem: (cartItemId: string) => void
+  updateQuantity: (cartItemId: string, quantity: number) => void
+  clearCart: () => void
+  toggleCart: () => void
+  openCart: () => void
+  closeCart: () => void
+  applyCoupon: (code: string) => { ok: boolean; message: string }
+  removeCoupon: () => void
+  coupon?: Coupon
+  pendingAdd: PendingAdd | null
+  confirmPendingAdd: () => void
+  cancelPendingAdd: () => void
+  getTotalItems: () => number
+  getSubtotal: () => number
+  getDeliveryFee: () => number
+  getDiscount: () => number
+  getTotal: () => number
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+const CartContext = createContext<CartContextType | undefined>(undefined)
 
-const generateId = () => Math.random().toString(36).substr(2, 9);
+const generateId = () => Math.random().toString(36).slice(2, 11)
+
+const lineKey = (menuItemId: string, adicionais: Adicional[] = [], observacao = "") =>
+  [menuItemId, adicionais.map((a) => a.id).sort().join("+"), observacao.trim().toLowerCase()].join("|")
+
+function makeLine(menuItem: MenuItem, restaurantId: string, options: AddItemOptions): CartItem {
+  const adicionais = options.adicionais ?? []
+  return {
+    id: generateId(),
+    menuItem,
+    restaurantId,
+    quantity: Math.max(1, options.quantity ?? 1),
+    adicionais,
+    observacao: options.observacao?.trim() || undefined,
+    unitPrice: unitPriceWith(menuItem, adicionais),
+  }
+}
 
 function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case "ADD_ITEM": {
-      const { menuItem, restaurantId } = action.payload;
-      
-      // If adding from a different restaurant, clear the cart first
-      if (state.restaurantId && state.restaurantId !== restaurantId) {
-        return {
-          ...state,
-          items: [
-            {
-              id: generateId(),
-              menuItem,
-              quantity: 1,
-              restaurantId,
-            },
-          ],
-          restaurantId,
-        };
+      const { menuItem, restaurantId, options } = action.payload
+      const key = lineKey(menuItem.id, options.adicionais, options.observacao)
+      const idx = state.items.findIndex(
+        (i) => lineKey(i.menuItem.id, i.adicionais, i.observacao ?? "") === key,
+      )
+      if (idx > -1) {
+        const items = state.items.map((i, n) =>
+          n === idx ? { ...i, quantity: i.quantity + Math.max(1, options.quantity ?? 1) } : i,
+        )
+        return { ...state, items }
       }
+      return { ...state, items: [...state.items, makeLine(menuItem, restaurantId, options)], restaurantId }
+    }
 
-      const existingItemIndex = state.items.findIndex(
-        (item) =>
-          item.menuItem.id === menuItem.id && item.restaurantId === restaurantId
-      );
-
-      if (existingItemIndex > -1) {
-        const updatedItems = [...state.items];
-        updatedItems[existingItemIndex].quantity += 1;
-        return { ...state, items: updatedItems };
-      }
-
-      return {
-        ...state,
-        items: [
-          ...state.items,
-          {
-            id: generateId(),
-            menuItem,
-            quantity: 1,
-            restaurantId,
-          },
-        ],
-        restaurantId,
-      };
+    case "REPLACE_WITH": {
+      const { menuItem, restaurantId, options } = action.payload
+      return { ...state, items: [makeLine(menuItem, restaurantId, options)], restaurantId, couponCode: undefined }
     }
 
     case "REMOVE_ITEM": {
-      const filteredItems = state.items.filter(
-        (item) => item.menuItem.id !== action.payload.itemId
-      );
+      const items = state.items.filter((i) => i.id !== action.payload.cartItemId)
       return {
         ...state,
-        items: filteredItems,
-        restaurantId: filteredItems.length > 0 ? state.restaurantId : undefined,
-      };
+        items,
+        restaurantId: items.length ? state.restaurantId : undefined,
+        couponCode: items.length ? state.couponCode : undefined,
+      }
     }
 
     case "UPDATE_QUANTITY": {
-      const { itemId, quantity } = action.payload;
-      if (quantity <= 0) {
-        const filteredItems = state.items.filter((item) => item.menuItem.id !== itemId);
-        return {
-          ...state,
-          items: filteredItems,
-          restaurantId: filteredItems.length > 0 ? state.restaurantId : undefined,
-        };
-      }
-
-      return {
-        ...state,
-        items: state.items.map((item) =>
-          item.menuItem.id === itemId ? { ...item, quantity } : item
-        ),
-      };
+      const { cartItemId, quantity } = action.payload
+      if (quantity <= 0) return cartReducer(state, { type: "REMOVE_ITEM", payload: { cartItemId } })
+      return { ...state, items: state.items.map((i) => (i.id === cartItemId ? { ...i, quantity } : i)) }
     }
 
     case "CLEAR_CART":
-      return { ...state, items: [], restaurantId: undefined };
-
+      return { ...state, items: [], restaurantId: undefined, couponCode: undefined }
     case "TOGGLE_CART":
-      return { ...state, isOpen: !state.isOpen };
-
+      return { ...state, isOpen: !state.isOpen }
     case "OPEN_CART":
-      return { ...state, isOpen: true };
-
+      return { ...state, isOpen: true }
     case "CLOSE_CART":
-      return { ...state, isOpen: false };
-
+      return { ...state, isOpen: false }
+    case "SET_COUPON":
+      return { ...state, couponCode: action.payload }
     case "LOAD_CART":
-      return { ...state, items: action.payload.items, restaurantId: action.payload.restaurantId };
-
+      return {
+        ...state,
+        items: action.payload.items ?? [],
+        restaurantId: action.payload.restaurantId,
+        couponCode: action.payload.couponCode,
+      }
     default:
-      return state;
+      return state
   }
 }
 
+const STORAGE_KEY = "foodie-cart"
+
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(cartReducer, {
-    items: [],
-    isOpen: false,
-  });
+  const [state, dispatch] = useReducer(cartReducer, { items: [], isOpen: false })
+  const [hydrated, setHydrated] = useState(false)
+  const [pendingAdd, setPendingAdd] = useState<PendingAdd | null>(null)
 
-  // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("foodie-cart");
-    if (savedCart) {
-      try {
-        const parsed = JSON.parse(savedCart);
-        dispatch({ type: "LOAD_CART", payload: parsed });
-      } catch (error) {
-        console.error("Error loading cart from localStorage:", error);
-      }
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      if (saved) dispatch({ type: "LOAD_CART", payload: JSON.parse(saved) })
+    } catch (error) {
+      console.error("Não foi possível ler a sacola salva:", error)
     }
-  }, []);
+    setHydrated(true)
+  }, [])
 
-  // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("foodie-cart", JSON.stringify({
-      items: state.items,
-      restaurantId: state.restaurantId,
-    }));
-  }, [state.items, state.restaurantId]);
+    if (!hydrated) return
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ items: state.items, restaurantId: state.restaurantId, couponCode: state.couponCode }),
+      )
+    } catch {}
+  }, [state.items, state.restaurantId, state.couponCode, hydrated])
 
-  const addItem = (menuItem: MenuItem, restaurantId: string) => {
-    dispatch({ type: "ADD_ITEM", payload: { menuItem, restaurantId } });
-  };
+  const getSubtotal = useCallback(
+    () => state.items.reduce((t, i) => t + cartItemUnitPrice(i) * i.quantity, 0),
+    [state.items],
+  )
 
-  const removeItem = (itemId: string) => {
-    dispatch({ type: "REMOVE_ITEM", payload: { itemId } });
-  };
+  const getDeliveryFee = useCallback(() => {
+    if (!state.restaurantId || state.items.length === 0) return 0
+    const r = getRestaurantById(state.restaurantId)
+    if (!r) return 0
+    return r.entregaGratis || r.freeDelivery ? 0 : r.taxaEntrega || r.deliveryFee || 0
+  }, [state.restaurantId, state.items.length])
 
-  const updateQuantity = (itemId: string, quantity: number) => {
-    dispatch({ type: "UPDATE_QUANTITY", payload: { itemId, quantity } });
-  };
+  const coupon = useMemo(
+    () => (state.couponCode ? COUPONS.find((c) => c.codigo === state.couponCode) : undefined),
+    [state.couponCode],
+  )
 
-  const clearCart = () => {
-    dispatch({ type: "CLEAR_CART" });
-  };
-
-  const toggleCart = () => {
-    dispatch({ type: "TOGGLE_CART" });
-  };
-
-  const openCart = () => {
-    dispatch({ type: "OPEN_CART" });
-  };
-
-  const closeCart = () => {
-    dispatch({ type: "CLOSE_CART" });
-  };
-
-  const getTotalItems = () => {
-    return state.items.reduce((total, item) => total + item.quantity, 0);
-  };
-
-  const getSubtotal = () => {
-    return state.items.reduce(
-      (total, item) => total + (item.menuItem.precoPromocional || item.menuItem.preco || item.menuItem.price || 0) * item.quantity,
-      0
-    );
-  };
-
-  const getDeliveryFee = () => {
-    if (!state.restaurantId || state.items.length === 0) return 0;
-    const restaurant = getRestaurantById(state.restaurantId);
-    if (!restaurant) return 0;
-    return (restaurant.entregaGratis || restaurant.freeDelivery) ? 0 : (restaurant.taxaEntrega || restaurant.deliveryFee || 0);
-  };
-
-  const getDiscount = () => {
-    return 0; // Placeholder for future discount implementation
-  };
-
-  const getTotal = () => {
-    return getSubtotal() + getDeliveryFee() - getDiscount();
-  };
+  const getDiscount = useCallback(() => {
+    if (!coupon) return 0
+    const check = checkCoupon(coupon.codigo, { subtotal: getSubtotal(), restaurantId: state.restaurantId })
+    if (!check.ok) return 0
+    return couponDiscount(coupon, getSubtotal(), getDeliveryFee())
+  }, [coupon, getSubtotal, getDeliveryFee, state.restaurantId])
 
   const value: CartContextType = {
     state,
-    addItem,
-    removeItem,
-    updateQuantity,
-    clearCart,
-    toggleCart,
-    openCart,
-    closeCart,
-    getTotalItems,
+    addItem: (menuItem, restaurantId, options = {}) => {
+      if (state.restaurantId && state.restaurantId !== restaurantId && state.items.length > 0) {
+        setPendingAdd({ menuItem, restaurantId, options })
+        return "needs-confirmation"
+      }
+      dispatch({ type: "ADD_ITEM", payload: { menuItem, restaurantId, options } })
+      return "added"
+    },
+    removeItem: (cartItemId) => dispatch({ type: "REMOVE_ITEM", payload: { cartItemId } }),
+    updateQuantity: (cartItemId, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { cartItemId, quantity } }),
+    clearCart: () => dispatch({ type: "CLEAR_CART" }),
+    toggleCart: () => dispatch({ type: "TOGGLE_CART" }),
+    openCart: () => dispatch({ type: "OPEN_CART" }),
+    closeCart: () => dispatch({ type: "CLOSE_CART" }),
+    applyCoupon: (code) => {
+      const check = checkCoupon(code, { subtotal: getSubtotal(), restaurantId: state.restaurantId })
+      if (!check.ok) return { ok: false, message: check.message }
+      dispatch({ type: "SET_COUPON", payload: check.coupon.codigo })
+      return { ok: true, message: check.coupon.descricao }
+    },
+    removeCoupon: () => dispatch({ type: "SET_COUPON", payload: undefined }),
+    coupon,
+    pendingAdd,
+    confirmPendingAdd: () => {
+      if (pendingAdd) dispatch({ type: "REPLACE_WITH", payload: pendingAdd })
+      setPendingAdd(null)
+    },
+    cancelPendingAdd: () => setPendingAdd(null),
+    getTotalItems: () => state.items.reduce((t, i) => t + i.quantity, 0),
     getSubtotal,
     getDeliveryFee,
     getDiscount,
-    getTotal,
-  };
+    getTotal: () => Math.max(0, getSubtotal() + getDeliveryFee() - getDiscount()),
+  }
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
 
 export function useCart() {
-  const context = useContext(CartContext);
-  if (context === undefined) {
-    throw new Error("useCart must be used within a CartProvider");
-  }
-  return context;
+  const context = useContext(CartContext)
+  if (context === undefined) throw new Error("useCart precisa estar dentro de <CartProvider>")
+  return context
 }

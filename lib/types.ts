@@ -146,6 +146,12 @@ export interface CartItem {
   menuItem: MenuItem;
   quantity: number;
   restaurantId: string;
+  /** Adicionais escolhidos para este item. */
+  adicionais?: Adicional[];
+  /** Observação do cliente ("sem cebola"). */
+  observacao?: string;
+  /** Preço unitário já com adicionais. */
+  unitPrice?: number;
 }
 
 export interface Cart {
@@ -159,6 +165,9 @@ export interface OrderItem {
   id: string;
   menuItem: MenuItem;
   quantity: number;
+  adicionais?: Adicional[];
+  observacao?: string;
+  unitPrice?: number;
 }
 
 export interface Order {
@@ -175,6 +184,8 @@ export interface Order {
   createdAt: string;
   estimatedDeliveryTime: string;
   deliveryAddress: string;
+  couponCode?: string;
+  paymentMethod?: string;
 }
 
 // Category Type

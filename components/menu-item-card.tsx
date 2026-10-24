@@ -1,53 +1,73 @@
 "use client"
 
-import Image from "next/image"
 import { Plus } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import type { MenuItem } from "@/lib/types"
-import { formatCurrency } from "@/utils/format"
+import { FoodImage } from "./food-image"
+import { Price } from "./price"
+import { hasPromo } from "@/lib/pricing"
+import { cn } from "@/lib/utils"
 
 interface MenuItemCardProps {
   item: MenuItem
-  onAddToCart: (item: MenuItem) => void
+  /** Abre o detalhe do prato. */
+  onOpen: (item: MenuItem) => void
+  /** Adiciona direto, sem adicionais. */
+  onQuickAdd?: (item: MenuItem) => void
+  inCart?: number
+  disabled?: boolean
 }
 
-export function MenuItemCard({ item, onAddToCart }: MenuItemCardProps) {
-  const itemName = item.nome || item.name || "Item"
-  const itemDesc = item.descricao || item.description || ""
-  const itemPrice = item.precoPromocional || item.preco || item.price || 0
-  const itemImage = item.imagem || item.image || "/placeholder.svg"
-
+export function MenuItemCard({ item, onOpen, onQuickAdd, inCart = 0, disabled }: MenuItemCardProps) {
+  const unavailable = !item.disponivel
   return (
-    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-md">
-      <CardContent className="p-0">
-        <div className="flex gap-4 p-4">
-          <div className="flex-1 space-y-2">
-            <h4 className="font-serif font-semibold text-lg text-card-foreground">{itemName}</h4>
-            <p className="text-sm text-muted-foreground line-clamp-2">{itemDesc}</p>
-            <div className="flex items-center justify-between">
-              <span className="font-semibold text-lg text-primary">{formatCurrency(itemPrice)}</span>
-              <Button
-                size="sm"
-                onClick={() => onAddToCart(item)}
-                className="gap-2 transition-all duration-200 hover:scale-105"
-              >
-                <Plus className="h-4 w-4" />
-                Adicionar
-              </Button>
-            </div>
-          </div>
-
-          <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-gray-100">
-            <Image
-              src={itemImage}
-              alt={itemName}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-110"
-            />
-          </div>
+    <div className={cn("group relative flex gap-4 rounded-2xl p-3 transition-colors hover:bg-secondary/70", unavailable && "opacity-60")}>
+      <button
+        type="button"
+        onClick={() => onOpen(item)}
+        className="absolute inset-0 rounded-2xl"
+        aria-label={`Ver ${item.nome}`}
+      />
+      <div className="pointer-events-none min-w-0 flex-1 py-1">
+        <div className="flex items-center gap-2">
+          {inCart > 0 && (
+            <span className="tabular grid min-w-6 place-items-center rounded-full bg-brand px-1.5 text-xs font-bold leading-6 text-brand-foreground">
+              {inCart}×
+            </span>
+          )}
+          <h4 className="truncate font-semibold">{item.nome}</h4>
         </div>
-      </CardContent>
-    </Card>
+        <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">{item.descricao}</p>
+        <div className="mt-2.5 flex flex-wrap items-center gap-2">
+          <Price product={item} />
+          {hasPromo(item) && (
+            <span className="rounded-full bg-[var(--pimenta)]/10 px-2 py-0.5 text-xs font-semibold text-[var(--pimenta)]">
+              Promoção
+            </span>
+          )}
+          {unavailable && <span className="text-xs font-medium text-muted-foreground">Indisponível hoje</span>}
+        </div>
+      </div>
+
+      <div className="relative size-28 shrink-0 overflow-hidden rounded-xl sm:size-32">
+        <FoodImage
+          src={item.imagem || item.image}
+          alt=""
+          categorySlug={item.categoria}
+          dishName={item.nome}
+          variant="flat"
+          emojiClassName="text-5xl transition-transform duration-300 group-hover:scale-110"
+        />
+        {onQuickAdd && !unavailable && !disabled && (
+          <button
+            type="button"
+            onClick={() => onQuickAdd(item)}
+            aria-label={`Adicionar ${item.nome} à sacola`}
+            className="absolute bottom-2 right-2 z-10 grid size-9 place-items-center rounded-full bg-white text-[var(--ink)] shadow-md transition-transform hover:scale-110 active:scale-95"
+          >
+            <Plus className="size-5" strokeWidth={2.5} />
+          </button>
+        )}
+      </div>
+    </div>
   )
 }
